@@ -1,0 +1,20 @@
+---
+import SocialLinkButton from '@components/elements/SocialLinkButton.astro';
+import type { SocialLink } from '@utils/social';
+
+export interface Props {
+  socials: SocialLink[];
+}
+
+const { socials } = Astro.props;
+---
+
+<ul class="flex flex-wrap items-center justify-end gap-0">
+  {
+    socials.map(social => (
+      <li>
+        <SocialLinkButton social={social} />
+      </li>
+    ))
+  }
+</ul>

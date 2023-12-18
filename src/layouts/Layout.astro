@@ -1,5 +1,10 @@
 ---
-import "../styles/style.css";
+import SocialLinkList from '@components/SocialLinkList.astro';
+import '@fontsource/ubuntu-mono/400.css';
+import '@fontsource/ubuntu-mono/700.css';
+import '@fontsource/ubuntu/400.css';
+import '@fontsource/ubuntu/700.css';
+import { socialLinks } from '@utils/info';
 
 interface Props {
   title: string;
@@ -7,7 +12,12 @@ interface Props {
 
 const { title } = Astro.props;
 
-const navPages = ["/", "/about", "/blog", "/markdown"];
+type NavPage = {
+  name: string;
+  href: string;
+};
+
+const navPages: NavPage[] = [{ name: 'about', href: '#about' }];
 ---
 
 <!doctype html>
@@ -21,18 +31,18 @@ const navPages = ["/", "/about", "/blog", "/markdown"];
   </head>
   <body>
     <div
-      class="container mx-auto mt-0 md:max-w-4xl px-4 h-full flex flex-col min-h-screen"
+      class="container mx-auto mt-0 flex h-full min-h-screen flex-col px-4 md:max-w-4xl"
     >
       <header class="flex justify-center py-4">
-        <ul class="flex max-w-full justify-center flex-wrap">
+        <ul class="flex max-w-full flex-wrap justify-center">
           {
-            navPages.map((page) => (
+            navPages.map(page => (
               <li class="m-2">
                 <a
-                  href={page}
-                  class="hover:text-tred active:text-twhite ease-in-out duration-100 p-2"
+                  href={page.href}
+                  class="p-2 duration-100 ease-in-out hover:text-tred active:text-twhite"
                 >
-                  {page}
+                  {page.name}
                 </a>
               </li>
             ))
@@ -42,8 +52,15 @@ const navPages = ["/", "/about", "/blog", "/markdown"];
 
       <slot />
 
-      <footer class="flex justify-center p-8 mt-40 text-tgreen">
-        © 2023 Anatoly Titov. Thanks
+      <footer
+        class="mt-40 flex items-center justify-between p-8 text-tgreen md:flex-row"
+      >
+        <aside>
+          <p>&copy;{new Date().getFullYear()}. thanks.</p>
+        </aside>
+        <nav>
+          <SocialLinkList socials={socialLinks} />
+        </nav>
       </footer>
     </div>
   </body>

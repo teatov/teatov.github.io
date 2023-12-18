@@ -1,6 +1,6 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
@@ -12,8 +12,8 @@ export default {
       tyellow: "#F2CC8F",
     },
     fontFamily: {
-      sans: ["Ubuntu", ...defaultTheme.fontFamily.sans],
-      mono: ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
+      sans: ["Ubuntu", ...fontFamily.sans],
+      mono: ["Ubuntu Mono", ...fontFamily.mono],
     },
     extend: {
       animation: {
@@ -26,5 +26,4 @@ export default {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+}  satisfies Config;

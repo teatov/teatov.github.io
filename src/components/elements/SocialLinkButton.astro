@@ -1,0 +1,28 @@
+---
+import type { SocialLink } from '@utils/social';
+import Icon from 'astro-icon';
+
+export interface Props {
+  social: SocialLink;
+  text?: string;
+}
+
+const { social, text } = Astro.props;
+---
+
+<a
+  href={social.link}
+  rel="nofollow"
+  class="group inline-block p-2"
+  title={social.platform.name}
+  aria-label={social.platform.name}
+>
+  <Icon
+    pack="tabler-icons"
+    name={social.platform.icon}
+    width="24"
+    height="24"
+    class="transition-transform duration-75 hover:rotate-6 hover:scale-110 active:rotate-180 active:scale-90"
+  />
+  {text ?? ''}
+</a>

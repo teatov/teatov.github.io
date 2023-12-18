@@ -7,8 +7,6 @@ export default defineConfig(
   {
     site: "https://teatov.github.io",
     base: "/",
-  },
-  {
-    integrations: [tailwind()],
+      integrations: [tailwind()],
   }
 );

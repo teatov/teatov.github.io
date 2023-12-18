@@ -1,28 +1,29 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Social from "../components/Social.astro";
-import { Icon } from "astro-icon";
+import SocialLinkList from '@components/SocialLinkList.astro';
+import { email, projects, skills, socialLinks } from '@utils/info';
+import { Icon } from 'astro-icon';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Anatoly Titov">
   <section
     id="about"
-    class="h-[calc(100vh-10rem)] flex flex-col justify-center align-middle space-y-12"
+    class="flex h-[calc(100vh-10rem)] flex-col justify-center space-y-12 align-middle"
   >
     <div
-      class="flex align-middle justify-center flex-col sm:flex-row items-center sm:items-start"
+      class="flex flex-col items-center justify-center align-middle sm:flex-row sm:items-start"
     >
       <div class="group">
-        <p class="text-9xl sm:text-[14rem] font-mono leading-none">
+        <p class="font-mono text-9xl leading-none sm:text-[14rem]">
           Hi<span class="absolute">,</span>
         </p>
       </div>
       <div
-        class="flex flex-col sm:pt-5 align-last-justify max-w-fit z-10 h-min"
+        class="z-10 flex h-min max-w-fit flex-col sm:pt-5"
+        style="text-align-last: justify;"
       >
-        <p class="text-4xl sm:text-5xl font-medium">I'm Anatoly:</p>
-        <ul class="text-xl list-disc list-inside">
+        <p class="text-4xl font-medium sm:text-5xl">I'm Anatoly:</p>
+        <ul class="list-inside list-disc text-xl">
           <li class="text-tgreen">A fullstack web developer,</li>
           <li class="text-tyellow">A hobbyist game developer,</li>
           <li class="text-tred">And a programming enjoyer.</li>
@@ -30,116 +31,62 @@ import { Icon } from "astro-icon";
       </div>
     </div>
     <div class="flex justify-around">
-      <a
-        href="#contact"
-        class="text-xl relative group font-bold active:scale-90 ease-in-out duration-100"
-      >
-        <span>contact me</span>
-        <span
-          class="absolute left-0 bottom-px w-full h-0.5 bg-twhite group-hover:h-full ease-in-out duration-100 mix-blend-exclusion"
-        ></span>
-      </a>
-      <ul class="flex space-x-4">
-        <Social icon="twitter" />
-        <Social icon="github" />
-        <Social icon="vk" />
-      </ul>
+      <div>
+        <a
+          href="#contact"
+          class="group relative text-xl font-bold duration-100 ease-in-out active:scale-90"
+        >
+          <span>contact me</span>
+          <span
+            class="absolute bottom-px left-0 h-0.5 w-full bg-twhite mix-blend-exclusion duration-100 ease-in-out group-hover:h-full"
+          ></span>
+        </a>
+      </div>
+      <SocialLinkList socials={socialLinks} />
     </div>
   </section>
-  <div class="flex justify-center my-7">
-    <Icon pack="mdi" name="chevron-down" width="2em" height="2em" />
+  <div class="my-7 flex justify-center">
+    <Icon pack="tabler-icons" name="chevron-down" width="2em" height="2em" />
   </div>
 
   <section id="skills" class="my-20">
     <div class="flex flex-wrap justify-between">
-      <div class="m-2">
-        <h6 class="font-mono text-4xl font-medium text-tyellow">
-          <Icon pack="mdi" name="code-braces" width="1em" height="1em" />
-           languages
-        </h6>
-        <ul class="list-disc list-inside">
-          <li>JavaScript</li>
-          <li>
-            TypeScript
-            <Icon
-              pack="mdi"
-              name="heart"
-              width="1em"
-              height="1em"
-              class="inline text-tred"
-            />
-          </li>
-          <li>PHP</li>
-          <li>Python</li>
-          <li>C#</li>
-          <li>C/C++</li>
-        </ul>
-      </div>
-      <div class="m-2">
-        <h6 class="font-mono text-4xl font-medium text-tyellow">
-          <Icon
-            pack="mdi"
-            name="application-braces-outline"
-            width="1em"
-            height="1em"
-          />
-           frameworks
-        </h6>
-        <ul class="list-disc list-inside">
-          <li>Tailwind CSS</li>
-          <li>
-            Svelte + SvelteKit <Icon
-              pack="mdi"
-              name="heart"
-              width="1em"
-              height="1em"
-              class="inline text-tred"
-            />
-          </li>
-          <li>Yii</li>
-        </ul>
-      </div>
-      <div class="m-2">
-        <h6 class="font-mono text-4xl font-medium text-tyellow">
-          <Icon
-            pack="mdi"
-            name="bread-slice-outline"
-            width="1em"
-            height="1em"
-          />
-           obvious
-        </h6>
-        <ul class="list-disc list-inside">
-          <li>HTML + CSS</li>
-          <li>Git</li>
-          <li>SQL</li>
-        </ul>
-      </div>
-      <div class="m-2">
-        <h6 class="font-mono text-4xl font-medium text-tyellow">
-          <Icon pack="mdi" name="arrow-expand" width="1em" height="1em" />
-           misc
-        </h6>
-        <ul class="list-disc list-inside">
-          <li>Unity</li>
-          <li>Cinema 4D</li>
-          <li>
-            LaTeX <Icon
-              pack="mdi"
-              name="heart"
-              width="1em"
-              height="1em"
-              class="inline text-tred"
-            />
-          </li>
-          <li>Figma</li>
-        </ul>
-      </div>
+      {
+        skills.map(skillSet => (
+          <div class="m-2">
+            <h6 class="font-mono text-4xl font-medium text-tyellow">
+              <Icon
+                pack="tabler-icons"
+                name={skillSet.icon}
+                width="1em"
+                height="1em"
+              />
+              {skillSet.title}
+            </h6>
+            <ul class="list-inside list-disc">
+              {skillSet.skills.map(skill => (
+                <li>
+                  {skill.name}
+                  {skill.love && (
+                    <Icon
+                      pack="tabler-icons"
+                      name="heart-filled"
+                      width="1em"
+                      height="1em"
+                      class="inline text-tred"
+                    />
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
     </div>
     <p class="text-right text-tgreen">
       <Icon
-        pack="mdi"
-        name="heart"
+        pack="tabler-icons"
+        name="heart-filled"
         width="1em"
         height="1em"
         class="inline text-tred"
@@ -148,26 +95,24 @@ import { Icon } from "astro-icon";
   </section>
 
   <section id="projects" class="my-20 flex flex-col items-center">
-    <h6 class="text-center font-mono font-bold text-5xl">I worked on:</h6>
-    <ul class="flex w-3/4 sm:w-2/3 flex-col sm:flex-row">
+    <h6 class="text-center font-mono text-5xl font-bold">I worked on:</h6>
+    <ul class="flex w-3/4 flex-col sm:w-2/3 sm:flex-row">
       <div class="flex flex-col sm:w-1/2">
-        <Card
-          title="My Univer: FEFU's personal account service."
-          href="https://univer.dvfu.ru/"
-          image="/images/univer.png"
-        />
-        <Card
-          title="A geodesy survey card generator/database for FEFU. Made as a study project."
-          href="https://github.com/Teatov/geodesy-project"
-          image="/images/geoproj.png"
-        />
-      </div>
-      <div class="flex flex-col sm:w-1/2">
-        <Card
-          title="Cookery: a website for sharing food recipes. Made as a study project."
-          href="https://github.com/Teatov/cookery"
-          image="/images/cookery.png"
-        />
+        {
+          projects.map(project => (
+            <li>
+              <a href={project.url} target="_blank">
+                <div
+                  class="w-full border border-tpurple p-1 duration-100 ease-in-out hover:translate-y-1
+             hover:border-tgreen active:-translate-y-1 sm:p-4"
+                >
+                  <img src={project.image.src} alt="" />
+                  <p class="text-justify">{project.title}</p>
+                </div>
+              </a>
+            </li>
+          ))
+        }
       </div>
     </ul>
   </section>
@@ -179,7 +124,9 @@ import { Icon } from "astro-icon";
         class="font-mono text-4xl underline decoration-dashed hover:decoration-solid"
         href="mailto:hello@teatov.com"
       >
-        hello@teatov.com
+        {email.user}@<span class="hidden">SCREW EMAIL HARVESTERS</span>{
+          email.domain
+        }
       </a>
     </div>
   </section>
