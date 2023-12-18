@@ -72,14 +72,15 @@ const t = useTranslations(lang as keyof typeof languages);
         {
           skills.map(skillSet => (
             <div class="m-2">
-              <h6 class="font-mono text-4xl font-bold text-tyellow">
+              <h6 class="flex items-center font-mono text-4xl font-bold text-tyellow">
                 <Icon
                   pack="tabler-icons"
                   name={skillSet.icon}
                   width="1em"
                   height="1em"
+                  class="inline"
                 />
-                {t(skillSet.title)}
+                <span>{t(skillSet.title)}</span>
               </h6>
               <ul class="list-inside list-disc">
                 {skillSet.skills.map(skill => (
@@ -127,7 +128,9 @@ const t = useTranslations(lang as keyof typeof languages);
                 <h6 class="font-mono text-4xl font-bold text-tyellow">
                   {t(experience.title)}
                 </h6>
-                <div class="text-tgreen font-bold">{t(experience.timeSpan)}</div>
+                <div class="font-bold text-tgreen">
+                  {t(experience.timeSpan)}
+                </div>
               </div>
               <p class="text-xl font-bold">{t(experience.job)}</p>
               <p>{t(experience.description)}</p>
@@ -152,7 +155,7 @@ const t = useTranslations(lang as keyof typeof languages);
         <h6 class="font-mono text-4xl font-bold text-tyellow">
           {t(education.university)}
         </h6>
-        <div class="text-tgreen font-bold">{education.timeSpan}</div>
+        <div class="font-bold text-tgreen">{education.timeSpan}</div>
       </div>
       <p>{t(education.title)}</p>
     </section>

@@ -83,7 +83,7 @@ export const info = {
     'project3.alt': 'Скриншот сайта Cookery',
     'skill1.title': 'языки',
     'skill2.title': 'фреймворки',
-    'skill3.title': 'разумеющееся',
+    'skill3.title': 'разумеется',
     'skill4.title': 'прочее',
     'experience1.title': 'Дальневосточный Федеральный Университет',
     'experience1.job': 'Младший веб-разработчик',
