@@ -22,14 +22,6 @@ export const socialLink = (
   };
 };
 
-export const ownWebsite: SocialPlatform = {
-  name: 'Website',
-  icon: 'link',
-  profileLink(username) {
-    return `https://${username}`;
-  },
-};
-
 export const twitter: SocialPlatform = {
   name: 'Twitter',
   icon: 'brand-twitter',
@@ -43,38 +35,6 @@ export const vk: SocialPlatform = {
   icon: 'brand-vk',
   profileLink(username) {
     return `https://vk.com/${username}`;
-  },
-};
-
-export const youtube: SocialPlatform = {
-  name: 'YouTube',
-  icon: 'brand-youtube',
-  profileLink(username) {
-    return `https://youtube.com/@${username}`;
-  },
-};
-
-export const itch: SocialPlatform = {
-  name: 'Itch.io',
-  icon: 'brand-itch',
-  profileLink(username, endpoint = '') {
-    return `https://${username}.itch.io/${endpoint}`;
-  },
-};
-
-export const discord: SocialPlatform = {
-  name: 'Discord',
-  icon: 'brand-discord',
-  profileLink(username) {
-    return `https://discord.com/${username}`;
-  },
-};
-
-export const steam: SocialPlatform = {
-  name: 'Steam',
-  icon: 'brand-steam',
-  profileLink(username) {
-    return `https://store.steampowered.com/app/${username}`;
   },
 };
 

@@ -44,8 +44,9 @@ const t = useTranslations(lang as keyof typeof languages);
               } text-9xl`}
             >
               <Fragment set:html={t('hero.hi')} /><span
-                class={`absolute ${lang === 'ru' ? '-ml-6' : '-ml-6 sm:-ml-11'}`}
-                >,</span
+                class={`absolute ${
+                  lang === 'ru' ? '-ml-6' : '-ml-6 sm:-ml-11'
+                }`}>,</span
               >
             </p>
           </div>
