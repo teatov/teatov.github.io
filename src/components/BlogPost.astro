@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  url?: string;
+  image: string;
+  alt: string;
+  description: string;
+  date: string;
+}
+
+const { title, url, image, alt, description, date } = Astro.props;
+---
+
+<li>
+  <a href={url} class="flex gap-5 hover:underline">
+    <img src={image} alt={alt} class="w-32 h-32 object-contain" />
+    <div>
+      <h6 class="text-2xl font-bold">{title}</h6>
+      <p><em>{date}</em></p>
+      <p>{description}</p>
+    </div>
+  </a>
+</li>

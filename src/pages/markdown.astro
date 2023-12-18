@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Markdown editor">
+  <div id="markdown-editor" class="mt-20">
+    <div class="flex divide-x items-center">
+      <div class="flex">
+        <button
+          id="heading1"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="format-header-1" width="2em" height="2em" />
+        </button>
+        <button
+          id="heading2"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="format-header-2" width="2em" height="2em" />
+        </button>
+        <button
+          id="heading3"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="format-header-3" width="2em" height="2em" />
+        </button>
+      </div>
+      <div class="flex">
+        <button
+          id="bold"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="format-bold" width="2em" height="2em" />
+        </button>
+        <button
+          id="italic"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="format-italic" width="2em" height="2em" />
+        </button>
+      </div>
+      <div class="flex">
+        <button
+          id="link"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon pack="mdi" name="link" width="2em" height="2em" />
+        </button>
+        <button
+          id="list-ul"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon
+            pack="mdi"
+            name="format-list-bulleted"
+            width="2em"
+            height="2em"
+          />
+        </button>
+        <button
+          id="list-ol"
+          class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+        >
+          <Icon
+            pack="mdi"
+            name="format-list-numbered"
+            width="2em"
+            height="2em"
+          />
+        </button>
+      </div>
+      <button
+        id="preview"
+        class="p-1 ease-in-out duration-100 hover:bg-tgreen active:bg-tpurple"
+      >
+        <Icon pack="mdi" name="eye" width="2em" height="2em" class="inline" />
+         Preview
+      </button>
+    </div>
+    <div id="input-output">
+      <textarea
+        id="input-area"
+        class="w-full bg-tpurple border-tgreen border p-4"
+        rows="20"></textarea>
+      <div id="output-area" class="hidden prose"></div>
+    </div>
+  </div>
+</Layout>
+
+<script src="../scripts/md.js"></script>

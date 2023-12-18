@@ -1,0 +1,17 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props;
+---
+
+<li
+  class="ease-in-out duration-100 hover:rotate-6 hover:scale-110 active:rotate-180 active:scale-90"
+>
+  <a href="/#" target="_blank">
+    <Icon pack="mdi" name={icon} width="2em" height="2em" />
+  </a>
+</li>
