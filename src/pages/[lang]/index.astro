@@ -60,9 +60,9 @@ const t = useTranslations(lang as keyof typeof languages);
               {t('hero.im')}:
             </p>
             <ul class="ml-4 list-disc text-xl">
-              <li class="text-tgreen">{t('hero.title1')},</li>
-              <li class="text-tyellow">{t('hero.title2')},</li>
-              <li class="text-tred">{t('hero.title3')}.</li>
+              <li class="text-green">{t('hero.title1')},</li>
+              <li class="text-yellow">{t('hero.title2')},</li>
+              <li class="text-red">{t('hero.title3')}.</li>
             </ul>
           </div>
         </div>
@@ -82,7 +82,7 @@ const t = useTranslations(lang as keyof typeof languages);
         {
           skills.map(skillSet => (
             <div class="m-2">
-              <h6 class="flex items-center font-mono text-4xl font-bold text-tyellow">
+              <h6 class="flex items-center font-mono text-4xl font-bold text-yellow">
                 <Icon
                   pack="tabler-icons"
                   name={skillSet.icon}
@@ -102,7 +102,7 @@ const t = useTranslations(lang as keyof typeof languages);
                         name="heart-filled"
                         width="1em"
                         height="1em"
-                        class="inline text-tred"
+                        class="inline text-red"
                       />
                     )}
                   </li>
@@ -112,13 +112,13 @@ const t = useTranslations(lang as keyof typeof languages);
           ))
         }
       </div>
-      <p class="text-right text-tgreen">
+      <p class="text-right text-green">
         <Icon
           pack="tabler-icons"
           name="heart-filled"
           width="1em"
           height="1em"
-          class="inline text-tred"
+          class="inline text-red"
         />
         {t('skills.meansLove')}
       </p>
@@ -135,10 +135,10 @@ const t = useTranslations(lang as keyof typeof languages);
           experiences.map(experience => (
             <li>
               <div class="flex flex-col justify-between md:flex-row">
-                <h6 class="font-mono text-4xl font-bold text-tyellow">
+                <h6 class="font-mono text-4xl font-bold text-yellow">
                   {t(experience.title)}
                 </h6>
-                <div class="font-bold text-tgreen">
+                <div class="font-bold text-green">
                   {t(experience.timeSpan)}
                 </div>
               </div>
@@ -162,10 +162,10 @@ const t = useTranslations(lang as keyof typeof languages);
         {t('education.header')}:
       </h6>
       <div class="flex flex-col justify-between md:flex-row">
-        <h6 class="font-mono text-4xl font-bold text-tyellow">
+        <h6 class="font-mono text-4xl font-bold text-yellow">
           {t(education.university)}
         </h6>
-        <div class="font-bold text-tgreen">{education.timeSpan}</div>
+        <div class="font-bold text-green">{education.timeSpan}</div>
       </div>
       <p>{t(education.title)}</p>
     </section>
@@ -185,8 +185,8 @@ const t = useTranslations(lang as keyof typeof languages);
                   <li>
                     <a
                       href={project.url}
-                      class="block w-full border border-tpurple p-1 duration-100 ease-in-out hover:translate-y-1
-                 hover:border-tgreen active:-translate-y-1 sm:p-4"
+                      class="block w-full border border-purple p-1 duration-100 ease-in-out hover:translate-y-1
+                 hover:border-green active:-translate-y-1 sm:p-4"
                       target="_blank"
                     >
                       <Image
@@ -207,7 +207,7 @@ const t = useTranslations(lang as keyof typeof languages);
 
     <section id="contact" class="flex justify-center">
       <div class="w-min">
-        <h6 class="text-xl font-bold text-tred">{t('contact.header')}</h6>
+        <h6 class="text-xl font-bold text-red">{t('contact.header')}</h6>
         <a
           class="font-mono text-4xl underline decoration-dashed decoration-2 hover:decoration-solid"
           href="mailto:hello@teatov.com"

@@ -34,7 +34,7 @@ const navPages: NavPage[] = [
 ---
 
 <!doctype html>
-<html lang={lang} class="dark scroll-smooth bg-tpurple text-twhite">
+<html lang={lang} class="dark scroll-smooth bg-purple text-white">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -47,7 +47,7 @@ const navPages: NavPage[] = [
       class="container mx-auto mt-0 flex h-full max-w-screen-lg flex-col justify-between px-4"
     >
       <header
-        class="container fixed top-0 z-50 flex max-w-screen-lg items-center justify-between bg-gradient-to-b from-tpurple via-tpurple/50 via-75% py-4 pr-8"
+        class="container fixed top-0 z-50 flex max-w-screen-lg items-center justify-between bg-gradient-to-b from-purple via-purple/50 via-75% py-4 pr-8"
       >
         <ul class="flex max-w-full flex-wrap justify-center gap-x-2">
           {
@@ -55,7 +55,7 @@ const navPages: NavPage[] = [
               <li>
                 <a
                   href={page.href}
-                  class="block p-2 duration-100 ease-in-out hover:text-tred active:text-twhite"
+                  class="block p-2 duration-100 ease-in-out hover:text-red active:text-white"
                 >
                   {page.name}
                 </a>
@@ -70,7 +70,7 @@ const navPages: NavPage[] = [
                 langHref !== lang && (
                   <a
                     href={`/${langHref}/`}
-                    class="group flex items-center p-2 duration-100 ease-in-out hover:text-tgreen active:text-twhite"
+                    class="group flex items-center p-2 duration-100 ease-in-out hover:text-green active:text-white"
                   >
                     <Icon
                       pack="tabler-icons"
@@ -88,7 +88,7 @@ const navPages: NavPage[] = [
       <slot />
 
       <footer
-        class="mt-40 flex items-center justify-between p-8 text-tgreen md:flex-row"
+        class="mt-40 flex items-center justify-between p-8 text-green md:flex-row"
       >
         <aside>
           <p>&copy;{new Date().getFullYear()}. {t('footer.copyright')}.</p>
