@@ -24,12 +24,12 @@ type NavPage = {
 };
 
 const navPages: NavPage[] = [
-  { name: t('nav.about'), href: '/#about' },
-  { name: t('nav.skills'), href: '/#skills' },
-  { name: t('nav.experience'), href: '/#experience' },
-  { name: t('nav.education'), href: '/#education' },
-  { name: t('nav.projects'), href: '/#projects' },
-  { name: t('nav.contact'), href: '/#contact' },
+  { name: t('nav.about'), href: '#about' },
+  { name: t('nav.skills'), href: '#skills' },
+  { name: t('nav.experience'), href: '#experience' },
+  { name: t('nav.education'), href: '#education' },
+  { name: t('nav.projects'), href: '#projects' },
+  { name: t('nav.contact'), href: '#contact' },
 ];
 ---
 
@@ -46,14 +46,16 @@ const navPages: NavPage[] = [
     <div
       class="container mx-auto mt-0 flex h-full min-h-screen flex-col justify-between px-4 md:max-w-4xl"
     >
-      <header class="flex items-center justify-between py-4">
-        <ul class="flex max-w-full flex-wrap justify-center">
+      <header
+        class="sticky top-0 z-50 flex items-center justify-between bg-gradient-to-b from-tpurple via-tpurple/50 via-75% py-4"
+      >
+        <ul class="flex max-w-full flex-wrap justify-center gap-x-2">
           {
             navPages.map(page => (
-              <li class="m-2">
+              <li>
                 <a
                   href={page.href}
-                  class="p-2 duration-100 ease-in-out hover:text-tred active:text-twhite"
+                  class="block p-2 duration-100 ease-in-out hover:text-tred active:text-twhite"
                 >
                   {page.name}
                 </a>

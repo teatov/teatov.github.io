@@ -37,14 +37,18 @@ const t = useTranslations(lang as keyof typeof languages);
         >
           <div class="group">
             <p class="font-mono text-9xl leading-none sm:text-[14rem]">
-              {t('hero.hi')}<span class="absolute -ml-11">,</span>
+              {t('hero.hi')}<span class="absolute -ml-6 sm:-ml-11">,</span>
             </p>
           </div>
           <div
             class="z-10 flex h-min max-w-fit flex-col sm:pt-5"
             style="text-align-last: justify;"
           >
-            <p class="text-4xl font-medium sm:text-5xl">{t('hero.im')}:</p>
+            <p
+              class="text-4xl font-bold underline decoration-wavy decoration-2 sm:text-5xl"
+            >
+              {t('hero.im')}:
+            </p>
             <ul class="ml-4 list-disc text-xl">
               <li class="text-tgreen">{t('hero.title1')},</li>
               <li class="text-tyellow">{t('hero.title2')},</li>
@@ -64,11 +68,11 @@ const t = useTranslations(lang as keyof typeof languages);
     </section>
 
     <section id="skills">
-      <div class="flex flex-wrap justify-between">
+      <div class="flex flex-wrap justify-around">
         {
           skills.map(skillSet => (
             <div class="m-2">
-              <h6 class="font-mono text-4xl font-medium text-tyellow">
+              <h6 class="font-mono text-4xl font-bold text-tyellow">
                 <Icon
                   pack="tabler-icons"
                   name={skillSet.icon}
@@ -110,7 +114,9 @@ const t = useTranslations(lang as keyof typeof languages);
     </section>
 
     <section id="experience">
-      <h6 class="mb-6 text-center font-mono text-5xl font-bold">
+      <h6
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+      >
         {t('experience.header')}:
       </h6>
       <ul>
@@ -118,12 +124,12 @@ const t = useTranslations(lang as keyof typeof languages);
           experiences.map(experience => (
             <li>
               <div class="flex flex-col justify-between md:flex-row">
-                <h6 class="font-mono text-4xl font-medium text-tyellow">
+                <h6 class="font-mono text-4xl font-bold text-tyellow">
                   {t(experience.title)}
                 </h6>
-                <div class="text-tgreen">{t(experience.timeSpan)}</div>
+                <div class="text-tgreen font-bold">{t(experience.timeSpan)}</div>
               </div>
-              <p class="text-xl">{t(experience.job)}</p>
+              <p class="text-xl font-bold">{t(experience.job)}</p>
               <p>{t(experience.description)}</p>
               <ul class="list-inside list-disc">
                 {experience.bullets?.map(bullet => (
@@ -136,21 +142,25 @@ const t = useTranslations(lang as keyof typeof languages);
       </ul>
     </section>
 
-    <section id="experience">
-      <h6 class="mb-6 text-center font-mono text-5xl font-bold">
+    <section id="education">
+      <h6
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+      >
         {t('education.header')}:
       </h6>
       <div class="flex flex-col justify-between md:flex-row">
-        <h6 class="font-mono text-4xl font-medium text-tyellow">
+        <h6 class="font-mono text-4xl font-bold text-tyellow">
           {t(education.university)}
         </h6>
-        <div class="text-tgreen">{education.timeSpan}</div>
+        <div class="text-tgreen font-bold">{education.timeSpan}</div>
       </div>
       <p>{t(education.title)}</p>
     </section>
 
     <section id="projects">
-      <h6 class="text-center font-mono text-5xl font-bold">
+      <h6
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+      >
         {t('projects.header')}:
       </h6>
       <div class="flex justify-center">
@@ -184,9 +194,9 @@ const t = useTranslations(lang as keyof typeof languages);
 
     <section id="contact" class="flex justify-center">
       <div class="w-min">
-        <h6 class="text-xl font-medium text-tred">{t('contact.header')}</h6>
+        <h6 class="text-xl font-bold text-tred">{t('contact.header')}</h6>
         <a
-          class="font-mono text-4xl underline decoration-dashed hover:decoration-solid"
+          class="font-mono text-4xl underline decoration-dashed decoration-2 hover:decoration-solid"
           href="mailto:hello@teatov.com"
         >
           {email.user}@<span class="hidden">TAKE THIS, EMAIL HARVESTERS</span>{
