@@ -22,7 +22,6 @@
     "@fontsource/ubuntu-mono": "^5.0.18",
     "@iconify-json/tabler": "^1.1.102",
     "@iconify/utils": "^2.1.13",
-    "@tabler/icons": "^2.44.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@typescript-eslint/parser": "^6.14.0",
     "astro-eslint-parser": "^0.16.0",
