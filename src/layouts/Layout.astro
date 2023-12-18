@@ -4,7 +4,13 @@ import '@fontsource/ubuntu-mono/400.css';
 import '@fontsource/ubuntu-mono/700.css';
 import '@fontsource/ubuntu/400.css';
 import '@fontsource/ubuntu/700.css';
+import { languages } from '@i18n/ui';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
 import { socialLinks } from '@utils/info';
+import { Icon } from 'astro-icon';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   title: string;
@@ -17,11 +23,18 @@ type NavPage = {
   href: string;
 };
 
-const navPages: NavPage[] = [{ name: 'about', href: '#about' }];
+const navPages: NavPage[] = [
+  { name: t('nav.about'), href: '/#about' },
+  { name: t('nav.skills'), href: '/#skills' },
+  { name: t('nav.experience'), href: '/#experience' },
+  { name: t('nav.education'), href: '/#education' },
+  { name: t('nav.projects'), href: '/#projects' },
+  { name: t('nav.contact'), href: '/#contact' },
+];
 ---
 
 <!doctype html>
-<html lang="en" class="dark scroll-smooth bg-tpurple text-twhite">
+<html lang={lang} class="dark scroll-smooth bg-tpurple text-twhite">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -31,9 +44,9 @@ const navPages: NavPage[] = [{ name: 'about', href: '#about' }];
   </head>
   <body>
     <div
-      class="container mx-auto mt-0 flex h-full min-h-screen flex-col px-4 md:max-w-4xl"
+      class="container mx-auto mt-0 flex h-full min-h-screen flex-col justify-between px-4 md:max-w-4xl"
     >
-      <header class="flex justify-center py-4">
+      <header class="flex items-center justify-between py-4">
         <ul class="flex max-w-full flex-wrap justify-center">
           {
             navPages.map(page => (
@@ -48,6 +61,26 @@ const navPages: NavPage[] = [{ name: 'about', href: '#about' }];
             ))
           }
         </ul>
+        <div>
+          {
+            Object.entries(languages).map(
+              ([langHref, label]) =>
+                langHref !== lang && (
+                  <a
+                    href={`/${langHref}/`}
+                    class="group flex items-center p-2 duration-100 ease-in-out hover:text-tgreen active:text-twhite"
+                  >
+                    <Icon
+                      pack="tabler-icons"
+                      name="world"
+                      class="w-[24px] shrink-0 transition-transform duration-75 group-hover:rotate-45 group-active:rotate-180"
+                    />
+                    <div>{label}</div>
+                  </a>
+                )
+            )
+          }
+        </div>
       </header>
 
       <slot />
@@ -56,7 +89,7 @@ const navPages: NavPage[] = [{ name: 'about', href: '#about' }];
         class="mt-40 flex items-center justify-between p-8 text-tgreen md:flex-row"
       >
         <aside>
-          <p>&copy;{new Date().getFullYear()}. thanks.</p>
+          <p>&copy;{new Date().getFullYear()}. {t('footer.copyright')}.</p>
         </aside>
         <nav>
           <SocialLinkList socials={socialLinks} />

@@ -1,0 +1,199 @@
+---
+import { languages } from '@i18n/ui';
+import { useTranslations } from '@i18n/utils';
+import Layout from '@layouts/Layout.astro';
+import {
+  education,
+  email,
+  experiences,
+  pageTitle,
+  projects,
+  skills,
+} from '@utils/info';
+import { Icon } from 'astro-icon';
+import { Image } from 'astro:assets';
+
+const { lang } = Astro.params;
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map(language => {
+    return {
+      params: {
+        lang: language,
+      },
+    };
+  });
+}
+
+const t = useTranslations(lang as keyof typeof languages);
+---
+
+<Layout title={t(pageTitle)}>
+  <main class="space-y-12">
+    <section id="about" class="flex h-[calc(100vh-4.5rem)] flex-col">
+      <div class="flex grow items-center justify-center">
+        <div
+          class="flex flex-col items-center justify-center align-middle sm:flex-row sm:items-start"
+        >
+          <div class="group">
+            <p class="font-mono text-9xl leading-none sm:text-[14rem]">
+              {t('hero.hi')}<span class="absolute -ml-11">,</span>
+            </p>
+          </div>
+          <div
+            class="z-10 flex h-min max-w-fit flex-col sm:pt-5"
+            style="text-align-last: justify;"
+          >
+            <p class="text-4xl font-medium sm:text-5xl">{t('hero.im')}:</p>
+            <ul class="ml-4 list-disc text-xl">
+              <li class="text-tgreen">{t('hero.title1')},</li>
+              <li class="text-tyellow">{t('hero.title2')},</li>
+              <li class="text-tred">{t('hero.title3')}.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="my-4 flex justify-center">
+        <Icon
+          pack="tabler-icons"
+          name="chevron-down"
+          width="2em"
+          height="2em"
+        />
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="flex flex-wrap justify-between">
+        {
+          skills.map(skillSet => (
+            <div class="m-2">
+              <h6 class="font-mono text-4xl font-medium text-tyellow">
+                <Icon
+                  pack="tabler-icons"
+                  name={skillSet.icon}
+                  width="1em"
+                  height="1em"
+                />
+                {t(skillSet.title)}
+              </h6>
+              <ul class="list-inside list-disc">
+                {skillSet.skills.map(skill => (
+                  <li>
+                    {skill.name}
+                    {skill.love && (
+                      <Icon
+                        pack="tabler-icons"
+                        name="heart-filled"
+                        width="1em"
+                        height="1em"
+                        class="inline text-tred"
+                      />
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+      <p class="text-right text-tgreen">
+        <Icon
+          pack="tabler-icons"
+          name="heart-filled"
+          width="1em"
+          height="1em"
+          class="inline text-tred"
+        />
+        {t('skills.meansLove')}
+      </p>
+    </section>
+
+    <section id="experience">
+      <h6 class="mb-6 text-center font-mono text-5xl font-bold">
+        {t('experience.header')}:
+      </h6>
+      <ul>
+        {
+          experiences.map(experience => (
+            <li>
+              <div class="flex flex-col justify-between md:flex-row">
+                <h6 class="font-mono text-4xl font-medium text-tyellow">
+                  {t(experience.title)}
+                </h6>
+                <div class="text-tgreen">{t(experience.timeSpan)}</div>
+              </div>
+              <p class="text-xl">{t(experience.job)}</p>
+              <p>{t(experience.description)}</p>
+              <ul class="list-inside list-disc">
+                {experience.bullets?.map(bullet => (
+                  <li>{t(bullet)}</li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h6 class="mb-6 text-center font-mono text-5xl font-bold">
+        {t('education.header')}:
+      </h6>
+      <div class="flex flex-col justify-between md:flex-row">
+        <h6 class="font-mono text-4xl font-medium text-tyellow">
+          {t(education.university)}
+        </h6>
+        <div class="text-tgreen">{education.timeSpan}</div>
+      </div>
+      <p>{t(education.title)}</p>
+    </section>
+
+    <section id="projects">
+      <h6 class="text-center font-mono text-5xl font-bold">
+        {t('projects.header')}:
+      </h6>
+      <div class="flex justify-center">
+        <ul class="flex w-3/4 flex-col sm:w-2/3 sm:flex-row">
+          {
+            [projects.slice(0, 2), projects.slice(2)].map(projectsSlice => (
+              <div class="flex flex-col sm:w-1/2">
+                {projectsSlice.map(project => (
+                  <li>
+                    <a
+                      href={project.url}
+                      class="block w-full border border-tpurple p-1 duration-100 ease-in-out hover:translate-y-1
+                 hover:border-tgreen active:-translate-y-1 sm:p-4"
+                      target="_blank"
+                    >
+                      <Image
+                        src={project.image}
+                        alt={t(project.alt)}
+                        format="jpeg"
+                      />
+                      <p class="text-justify">{t(project.title)}</p>
+                    </a>
+                  </li>
+                ))}
+              </div>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="flex justify-center">
+      <div class="w-min">
+        <h6 class="text-xl font-medium text-tred">{t('contact.header')}</h6>
+        <a
+          class="font-mono text-4xl underline decoration-dashed hover:decoration-solid"
+          href="mailto:hello@teatov.com"
+        >
+          {email.user}@<span class="hidden">TAKE THIS, EMAIL HARVESTERS</span>{
+            email.domain
+          }
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
