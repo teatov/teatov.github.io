@@ -33,7 +33,7 @@ export const ui = {
     'nav.projects': 'проекты',
     'nav.contact': 'связаться',
     'footer.copyright': 'спасибо',
-    'hero.hi': 'хай',
+    'hero.hi': 'при<br/>вет',
     'hero.im': 'я Анатолий',
     'hero.title1': 'фуллстак веб-разработчик',
     'hero.title2': 'хобби-разработчик игр',
@@ -64,7 +64,8 @@ export const info = {
     'experience1.title': 'Far Eastern Federal University',
     'experience1.job': 'Junior web developer',
     'experience1.timeSpan': 'December 2022 - present',
-    'experience1.description': "Supporting and extending on My Univer - FEFU's personal account service.",
+    'experience1.description':
+      "Supporting and extending on My Univer - FEFU's personal account service.",
     'experience1.bullet1': 'Backend with PHP, Yii2, MariaDB',
     'experience1.bullet2': 'Frontend with Vue, Bootstrap and Expromptum',
     'experience1.bullet3': 'Tests with Codeception',
@@ -78,8 +79,7 @@ export const info = {
     'project2.title':
       'Генератор/база данных геодезических карточек обследования для ДВФУ. Курсовой проект.',
     'project2.alt': 'Скриншот сайта с геодезическими карточками обследования',
-    'project3.title':
-      'Cookery: сайт для рецептов блюд. Курсовой проект.',
+    'project3.title': 'Cookery: сайт для рецептов блюд. Курсовой проект.',
     'project3.alt': 'Скриншот сайта Cookery',
     'skill1.title': 'языки',
     'skill2.title': 'фреймворки',
@@ -88,7 +88,8 @@ export const info = {
     'experience1.title': 'Дальневосточный Федеральный Университет',
     'experience1.job': 'Младший веб-разработчик',
     'experience1.timeSpan': 'Декабрь 2022 - настоящее время',
-    'experience1.description': "Занимаюсь поддержкой и расширением сайта Мой универ - сервиса личной учётной записи ДВФУ.",
+    'experience1.description':
+      'Занимаюсь поддержкой и расширением сайта Мой универ - сервиса личной учётной записи ДВФУ.',
     'experience1.bullet1': 'Бэкенд с PHP, Yii2, MariaDB',
     'experience1.bullet2': 'Фронтенд с Vue, Bootstrap и Экспромптум',
     'experience1.bullet3': 'Тесты с Codeception',
