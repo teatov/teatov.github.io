@@ -57,6 +57,9 @@ export const info = {
     'project3.title':
       'Cookery: a website for sharing food recipes. Made as a study project.',
     'project3.alt': 'A screenshot of the Cookery website',
+    'project4.title':
+      'Questa: a game-ified task tracker. Made as a study project.',
+    'project4.alt': 'A screenshot of the Questa website',
     'skill1.title': 'languages',
     'skill2.title': 'frameworks',
     'skill3.title': 'obvious',
@@ -82,6 +85,9 @@ export const info = {
     'project2.alt': 'Скриншот сайта с геодезическими карточками обследования',
     'project3.title': 'Cookery: сайт для рецептов блюд. Курсовой проект.',
     'project3.alt': 'Скриншот сайта Cookery',
+    'project4.title':
+      'Questa: игрофицированный трецер задач. Курсовой проект.',
+    'project4.alt': 'Скриншот сайта Questa',
     'skill1.title': 'языки',
     'skill2.title': 'фреймворки',
     'skill3.title': 'разумеется',

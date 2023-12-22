@@ -2,6 +2,7 @@ import { github, socialLink, twitter, vk } from './social';
 import imgCookery from '@assets/images/cookery.png';
 import imgGeoproj from '@assets/images/geoproj.png';
 import imgUniver from '@assets/images/univer.png';
+import imgQuesta from '@assets/images/questa.png';
 import type { i18nKey } from '@i18n/utils';
 
 export const pageTitle: i18nKey = 'page.title';
@@ -32,16 +33,22 @@ export const projects: Project[] = [
     alt: 'project1.alt',
   },
   {
+    title: 'project3.title',
+    url: 'https://github.com/teatov/cookery',
+    image: imgCookery,
+    alt: 'project3.alt',
+  },
+  {
+    title: 'project4.title',
+    url: 'https://github.com/teatov/questa',
+    image: imgQuesta,
+    alt: 'project4.alt',
+  },
+  {
     title: 'project2.title',
     url: 'https://github.com/teatov/geodesy-project',
     image: imgGeoproj,
     alt: 'project2.alt',
-  },
-  {
-    title: 'project3.title',
-    url: 'https://github.com/teatov/cookery',
-    image: imgCookery,
-    alt: 'project1.alt',
   },
 ];
 
