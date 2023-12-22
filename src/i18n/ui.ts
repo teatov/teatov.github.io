@@ -50,7 +50,7 @@ export const info = {
   en: {
     'page.title': 'Anatoly Titov - fullstack web developer',
     'project1.title': "My Univer: FEFU's personal account service.",
-    'project1.alt': 'A screenshot of the My Univer website',
+    'project1.alt': 'a screenshot of the My Univer website',
     'project2.title':
       'A geodesy survey card generator/database for FEFU. Made as a study project.',
     'project2.alt': 'A screenshot of the geodesy survey card website',
@@ -71,6 +71,7 @@ export const info = {
     'experience1.bullet3': 'Tests with Codeception',
     'education.university': 'Far Eastern Federal University',
     'education.title': 'Applied Computer Science in Design',
+    'education.description': 'Bachelor\'s degree',
   },
   ru: {
     'page.title': 'Анатолий Титов - фуллстак веб-разработчик',
@@ -87,7 +88,7 @@ export const info = {
     'skill4.title': 'прочее',
     'experience1.title': 'Дальневосточный Федеральный Университет',
     'experience1.job': 'Младший веб-разработчик',
-    'experience1.timeSpan': 'Декабрь 2022 - до сих пор',
+    'experience1.timeSpan': 'декабрь 2022 - до сих пор',
     'experience1.description':
       'Занимаюсь поддержкой и расширением сайта Мой универ - сервиса личной учётной записи ДВФУ.',
     'experience1.bullet1': 'Бэкенд с PHP, Yii2, MariaDB',
@@ -95,6 +96,7 @@ export const info = {
     'experience1.bullet3': 'Тесты с Codeception',
     'education.university': 'Дальневосточный Федеральный Университет',
     'education.title': 'Прикладная информатика в компьютерном дизайне',
+    'education.description': 'Бакалавриат',
   },
 } as const;
 

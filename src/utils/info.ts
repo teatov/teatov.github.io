@@ -131,10 +131,12 @@ export type Education = {
   university: i18nKey;
   title: i18nKey;
   timeSpan: string;
+  description: i18nKey;
 };
 
 export const education: Education = {
   university: 'education.university',
   title: 'education.title',
   timeSpan: '2021 - 2026...',
+  description: 'education.description',
 };
