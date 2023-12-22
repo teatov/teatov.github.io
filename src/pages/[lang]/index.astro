@@ -206,14 +206,11 @@ const t = useTranslations(lang as keyof typeof languages);
     <section id="contact" class="flex scroll-mt-32 justify-center">
       <div class="w-min">
         <h6 class="text-xl font-bold text-red">{t('contact.header')}</h6>
-        <a
-          class="font-mono text-4xl underline decoration-dashed decoration-2 hover:decoration-solid"
-          href="mailto:hello@teatov.com"
-        >
+        <p class="font-mono text-4xl underline decoration-dashed decoration-2">
           {email.user}@<span class="hidden">TAKE THIS, EMAIL HARVESTERS</span>{
             email.domain
           }
-        </a>
+        </p>
       </div>
     </section>
   </main>
