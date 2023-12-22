@@ -39,9 +39,10 @@ const t = useTranslations(lang as keyof typeof languages);
             <p
               class={`font-mono ${
                 lang === 'ru'
-                  ? 'leading-[0.7] mr-6'
+                  ? 'leading-[0.75] mr-4 font-bold'
                   : 'sm:text-[14rem] leading-none'
               } text-9xl`}
+              style="text-shadow: 0 3px 0px rgb(129 178 154), 0 6px 0px rgb(242 204 143), 0 9px 0px rgb(224 122 95);"
             >
               <Fragment set:html={t('hero.hi')} /><span
                 class={`absolute ${
@@ -126,7 +127,7 @@ const t = useTranslations(lang as keyof typeof languages);
 
     <section id="experience">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-green"
       >
         {t('experience.header')}:
       </h6>
@@ -157,7 +158,7 @@ const t = useTranslations(lang as keyof typeof languages);
 
     <section id="education">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-yellow"
       >
         {t('education.header')}:
       </h6>
@@ -167,12 +168,12 @@ const t = useTranslations(lang as keyof typeof languages);
         </h6>
         <div class="font-bold text-green">{education.timeSpan}</div>
       </div>
-      <p>{t(education.title)}</p>
+      <p class="text-xl font-bold">{t(education.title)}</p>
     </section>
 
     <section id="projects">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-red"
       >
         {t('projects.header')}:
       </h6>
