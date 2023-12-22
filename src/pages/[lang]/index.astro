@@ -39,9 +39,9 @@ const t = useTranslations(lang as keyof typeof languages);
             <p
               class={`font-mono ${
                 lang === 'ru'
-                  ? 'leading-[0.75] mr-4 font-bold'
-                  : 'sm:text-[14rem] leading-none'
-              } text-9xl`}
+                  ? 'leading-[0.75] mr-4 font-bold text-[9rem]'
+                  : 'sm:text-[14rem] leading-none text-9xl'
+              }`}
               style="text-shadow: 0 3px 0px rgb(129 178 154), 0 6px 0px rgb(242 204 143), 0 9px 0px rgb(224 122 95);"
             >
               <Fragment set:html={t('hero.hi')} /><span
@@ -52,7 +52,8 @@ const t = useTranslations(lang as keyof typeof languages);
             </p>
           </div>
           <div
-            class="z-10 flex h-min max-w-fit flex-col sm:pt-5"
+            class={`z-10 flex h-min max-w-fit flex-col ${ lang === 'ru'
+            ? 'sm:pt-9' : 'sm:pt-5'}`}
             style="text-align-last: justify;"
           >
             <p
