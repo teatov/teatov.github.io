@@ -13,8 +13,8 @@ export const socialLinks = [
 ];
 
 export const email = {
-  user: 'teatov',
-  domain: 'proton.me',
+  user: 'hlebpoimenigleb',
+  domain: 'gmail.com',
 };
 
 export type Project = {
