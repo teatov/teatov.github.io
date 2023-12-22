@@ -87,7 +87,7 @@ export const info = {
     'skill4.title': 'прочее',
     'experience1.title': 'Дальневосточный Федеральный Университет',
     'experience1.job': 'Младший веб-разработчик',
-    'experience1.timeSpan': 'Декабрь 2022 - настоящее время',
+    'experience1.timeSpan': 'Декабрь 2022 - до сих пор',
     'experience1.description':
       'Занимаюсь поддержкой и расширением сайта Мой универ - сервиса личной учётной записи ДВФУ.',
     'experience1.bullet1': 'Бэкенд с PHP, Yii2, MariaDB',

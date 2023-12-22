@@ -39,8 +39,8 @@ const t = useTranslations(lang as keyof typeof languages);
             <p
               class={`font-mono ${
                 lang === 'ru'
-                  ? 'leading-[0.75] mr-4 font-bold text-[9rem]'
-                  : 'sm:text-[14rem] leading-none text-9xl'
+                  ? 'leading-[0.75] mr-4 text-9xl sm:text-[9rem]'
+                  : 'sm:text-[14rem] leading-none text-[12rem]'
               }`}
               style="text-shadow: 0 3px 0px rgb(129 178 154), 0 6px 0px rgb(242 204 143), 0 9px 0px rgb(224 122 95);"
             >
@@ -52,8 +52,9 @@ const t = useTranslations(lang as keyof typeof languages);
             </p>
           </div>
           <div
-            class={`z-10 flex h-min max-w-fit flex-col ${ lang === 'ru'
-            ? 'sm:pt-9' : 'sm:pt-5'}`}
+            class={`z-10 flex h-min max-w-fit flex-col ${
+              lang === 'ru' ? 'sm:pt-9 pt-6' : 'sm:pt-5'
+            }`}
             style="text-align-last: justify;"
           >
             <p
@@ -79,7 +80,7 @@ const t = useTranslations(lang as keyof typeof languages);
       </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="scroll-mt-32">
       <div class="flex flex-wrap justify-around">
         {
           skills.map(skillSet => (
@@ -126,9 +127,9 @@ const t = useTranslations(lang as keyof typeof languages);
       </p>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="scroll-mt-32">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-green"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-green decoration-wavy decoration-2"
       >
         {t('experience.header')}:
       </h6>
@@ -140,9 +141,7 @@ const t = useTranslations(lang as keyof typeof languages);
                 <h6 class="font-mono text-4xl font-bold text-yellow">
                   {t(experience.title)}
                 </h6>
-                <div class="font-bold text-green">
-                  {t(experience.timeSpan)}
-                </div>
+                <div class="font-bold text-green">{t(experience.timeSpan)}</div>
               </div>
               <p class="text-xl font-bold">{t(experience.job)}</p>
               <p>{t(experience.description)}</p>
@@ -157,9 +156,9 @@ const t = useTranslations(lang as keyof typeof languages);
       </ul>
     </section>
 
-    <section id="education">
+    <section id="education" class="scroll-mt-32">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-yellow"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-yellow decoration-wavy decoration-2"
       >
         {t('education.header')}:
       </h6>
@@ -172,9 +171,9 @@ const t = useTranslations(lang as keyof typeof languages);
       <p class="text-xl font-bold">{t(education.title)}</p>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="scroll-mt-32">
       <h6
-        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-wavy decoration-2 decoration-red"
+        class="mb-6 text-center font-mono text-5xl font-bold underline decoration-red decoration-wavy decoration-2"
       >
         {t('projects.header')}:
       </h6>
@@ -190,6 +189,7 @@ const t = useTranslations(lang as keyof typeof languages);
                       class="block w-full border border-purple p-1 duration-100 ease-in-out hover:translate-y-1
                  hover:border-green active:-translate-y-1 sm:p-4"
                       target="_blank"
+                      rel="nofollow"
                     >
                       <Image
                         src={project.image}
@@ -207,7 +207,7 @@ const t = useTranslations(lang as keyof typeof languages);
       </div>
     </section>
 
-    <section id="contact" class="flex justify-center">
+    <section id="contact" class="flex scroll-mt-32 justify-center">
       <div class="w-min">
         <h6 class="text-xl font-bold text-red">{t('contact.header')}</h6>
         <a
