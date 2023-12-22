@@ -186,15 +186,11 @@ const t = useTranslations(lang as keyof typeof languages);
                   <li>
                     <a
                       href={project.url}
-                      class="block w-full border border-purple p-1 duration-100 ease-in-out hover:translate-y-1
-                 hover:border-green active:-translate-y-1 sm:p-4"
+                      class="hover:translate-y-1hover:border-green block w-full border border-purple p-1 duration-100 ease-in-out active:-translate-y-1 sm:p-4"
                       target="_blank"
                       rel="nofollow"
                     >
-                      <Image
-                        src={project.image}
-                        alt={t(project.alt)}
-                      />
+                      <Image src={project.image} alt={t(project.alt)} />
                       <p class="text-justify">{t(project.title)}</p>
                     </a>
                   </li>
