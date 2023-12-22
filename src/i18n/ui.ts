@@ -67,7 +67,7 @@ export const info = {
     'experience1.description':
       "Supporting and extending on My Univer - FEFU's personal account service.",
     'experience1.bullet1': 'Backend with PHP, Yii2, MariaDB',
-    'experience1.bullet2': 'Frontend with Vue, Bootstrap and Expromptum',
+    'experience1.bullet2': 'Frontend with Vue, jQuery and Bootstrap',
     'experience1.bullet3': 'Tests with Codeception',
     'education.university': 'Far Eastern Federal University',
     'education.title': 'Applied Computer Science in Design',
@@ -91,7 +91,7 @@ export const info = {
     'experience1.description':
       'Занимаюсь поддержкой и расширением сайта Мой универ - сервиса личной учётной записи ДВФУ.',
     'experience1.bullet1': 'Бэкенд с PHP, Yii2, MariaDB',
-    'experience1.bullet2': 'Фронтенд с Vue, Bootstrap и Экспромптум',
+    'experience1.bullet2': 'Фронтенд с Vue, jQuery и Bootstrap',
     'experience1.bullet3': 'Тесты с Codeception',
     'education.university': 'Дальневосточный Федеральный Университет',
     'education.title': 'Прикладная информатика в компьютерном дизайне',

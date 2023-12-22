@@ -75,6 +75,7 @@ export const skills: SkillSet[] = [
     icon: 'frame',
     skills: [
       { name: 'Svelte + SvelteKit', love: true },
+      { name: 'Vue.js' },
       { name: 'Astro' },
       { name: 'jQuery' },
       { name: 'Yii2' },
