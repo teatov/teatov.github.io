@@ -58,11 +58,15 @@ const waveHalf = [111, 82, 82, 70, 64, 68, 69, 69, 119];
 
 export const wave: number[] = [111, ...waveHalf, 119, ...waveHalf.toReversed()];
 
-export function socialBox(length: number): matrix {
+export function socialBox(
+  length1: number,
+  length2: number,
+  length3: number
+): matrix {
   return [
-    [null, 240, ...nChars(length, 192), 238, null],
-    [107, 221, ...nChars(length, 102), 221, 115],
-    [null, 237, ...nChars(length, 192), 253, null],
+    [null, 240, ...nChars(length1 + length2 + length3 + 2, 192), 238, null],
+    [107, 221, ...nChars(length1, null), 102, ...nChars(length2, null), 102, ...nChars(length3, null), 221, 115],
+    [null, 237, ...nChars(length1 + length2 + length3 + 2, 192), 253, null],
   ];
 }
 
