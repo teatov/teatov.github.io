@@ -1,0 +1,16 @@
+---
+import { indexMatrixToHtml, indexToEscapeChar } from '@/utils/petscii';
+
+export interface Props {
+  matrix?: (number | null)[][];
+  index?: number;
+}
+
+const { matrix, index } = Astro.props;
+---
+
+<Fragment
+  set:html={matrix
+    ? indexMatrixToHtml(matrix)
+    : indexToEscapeChar(index ?? null)}
+/>

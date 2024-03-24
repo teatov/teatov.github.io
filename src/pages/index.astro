@@ -1,0 +1,123 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Petscii from '@/components/Petscii.astro';
+import { anatoly, wave, socialBox, blogBox } from '@/utils/art';
+import { nChars } from '@/utils/petscii';
+---
+
+<Layout title="Anatoly Titov">
+  <div class="text-px16 sm:text-px24 smoothing-none text-nowrap font-c64pm">
+    <div class="text-grey-light sm:-ml-1">Hi, I'm</div>
+    <div title="Anatoly" aria-label="Anatoly:">
+      <div aria-hidden="true">
+        <Petscii matrix={anatoly} />
+      </div>
+    </div>
+    <div class="w-18 -mt-1 overflow-hidden text-grey-dark">
+      <div class="scroll w-20 select-none" aria-hidden="true">
+        <Petscii matrix={[[...wave, ...wave, ...wave.slice(0, 1)]]} />
+      </div>
+    </div>
+    <ul>
+      <li class="text-green-light sm:ml-3">
+        <span aria-hidden="true">
+          <Petscii index={90} />
+        </span> a fullstack web dev
+      </li>
+      <li class="text-yellow sm:ml-4">
+        <span aria-hidden="true">
+          <Petscii index={90} />
+        </span> a hobbyist game dev
+      </li>
+      <li class="text-red-light sm:ml-5">
+        <span aria-hidden="true">
+          <Petscii index={90} />
+        </span> ... and a 3D artist
+      </li>
+    </ul>
+    <div class="mt-1 flex flex-col sm:flex-row">
+      <div class="relative ml-2 sm:-ml-1">
+        <div
+          class="absolute -z-10 select-none text-grey-dark"
+          aria-hidden="true"
+        >
+          <Petscii matrix={socialBox(13)} />
+        </div>
+        <ul class="ml-1 pt-1">
+          <li class="ml-1 inline-block">
+            <a
+              href="https://twitter.com/ateatov"
+              class="inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+              title="Twitter"
+              aria-label="Twitter"
+              rel="nofollow, noopener, noreferrer"
+            >
+              twttr</a
+            >
+          </li><li class="ml-1 inline-block">
+            <a
+              href="https://github.com/teatov"
+              class="inline-block bg-grey-dark outline-none hover:bg-purple hover:text-blue-dark focus-visible:bg-purple focus-visible:text-blue-dark"
+              title="GitHub"
+              aria-label="GitHub"
+              rel="nofollow, noopener, noreferrer"
+            >
+              gthb</a
+            >
+          </li><li class="ml-1 inline-block">
+            <a
+              href="https://vk.com/ateatov"
+              class="inline-block bg-grey-dark outline-none hover:bg-blue-light hover:text-blue-dark focus-visible:bg-blue-light focus-visible:text-blue-dark"
+              title="VK"
+              aria-label="VK"
+              rel="nofollow, noopener, noreferrer"
+            >
+              vk</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="ml-6 mt-2 sm:ml-4 sm:mt-0">
+        <div
+          class="absolute -z-10 select-none text-grey-dark"
+          aria-hidden="true"
+        >
+          <Petscii matrix={blogBox(4)} />
+        </div>
+        <div class="ml-2 pt-1">
+          <a
+            href="/blog"
+            class="group inline-block text-grey-light outline-none"
+          >
+            <span
+              class="group-hover:bg-blue-light group-hover:text-blue-dark group-focus-visible:bg-blue-light group-focus-visible:text-blue-dark"
+              >b</span
+            ><span
+              class="group-hover:bg-green-light group-hover:text-green-dark group-focus-visible:bg-green-light group-focus-visible:text-green-dark"
+              >l</span
+            ><span
+              class="group-hover:bg-yellow group-hover:text-brown-light group-focus-visible:bg-yellow group-focus-visible:text-brown-light"
+              >o</span
+            ><span
+              class="group-hover:bg-red-light group-hover:text-red-dark group-focus-visible:bg-red-light group-focus-visible:text-red-dark"
+              >g</span
+            ></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="ml-3 mt-4 sm:ml-0">
+      <div class="text-grey-light">
+        hlebpoimenigleb<br class="sm:hidden" />@<span class="hidden"
+          >FUCK EMAIL HARVESTERS</span
+        >gmail.com
+      </div>
+      <div
+        class="w-15 select-none overflow-hidden text-red-dark sm:w-full"
+        aria-hidden="true"
+      >
+        <Petscii matrix={[[...nChars(25, 104)]]} />
+      </div>
+    </div>
+  </div>
+</Layout>
