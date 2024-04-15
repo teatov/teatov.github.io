@@ -1,0 +1,139 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import { getAllPosts, sortMDByDate } from '@/lib/post';
+import FormattedDate from '@/components/FormattedDate.astro';
+import { Image } from 'astro:assets';
+import Petscii from '@/components/Petscii.astro';
+import { wave } from '@/utils/art';
+import FontToggle from '@/components/FontToggle.astro';
+import { colors, getColorFromString } from '@/utils/colors';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allPosts = await getAllPosts();
+  const allPostsByDate = sortMDByDate(allPosts);
+  return paginate(allPostsByDate, { pageSize: 6 });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<CollectionEntry<'blog'>>;
+  uniqueTags: string[];
+}
+
+const { page } = Astro.props;
+
+const prevUrl = page.url.prev;
+const nextUrl = page.url.next;
+const currentPage = page.currentPage;
+const lastPage = page.lastPage;
+---
+
+<Layout title="Anatoly's Blog" description="An index of all my blog posts.">
+  <div
+    class="smoothing-none readable:font-sans readable:text-lg container max-w-screen-md px-1 py-4 font-c64pm text-px16"
+  >
+    <div>
+      <div class="flex items-start justify-between gap-1">
+        <div>
+          <h1 class="readable:font-bold">
+            my little <span
+              class="text-blue-light hover:bg-blue-light hover:text-blue-dark focus-visible:bg-blue-light focus-visible:text-blue-dark"
+              >b</span
+            ><span
+              class="text-green-light hover:bg-green-light hover:text-green-dark focus-visible:bg-green-light focus-visible:text-green-dark"
+              >l</span
+            ><span
+              class="text-yellow hover:bg-yellow hover:text-brown-light focus-visible:bg-yellow focus-visible:text-brown-light"
+              >o</span
+            ><span
+              class="text-red-light hover:bg-red-light hover:text-red-dark focus-visible:bg-red-light focus-visible:text-red-dark"
+              >g</span
+            >
+          </h1>
+          <div class="w-14 readable:hidden overflow-hidden text-grey-dark">
+            <div class="scroll w-20 select-none" aria-hidden="true">
+              <Petscii matrix={[[...wave, ...wave, ...wave.slice(0, 1)]]} />
+            </div>
+          </div>
+        </div>
+        <a
+          href="/"
+          class="inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+        >
+          <span aria-hidden="true"><Petscii index={31} /></span> back</a
+        >
+      </div>
+      <div class="flex justify-end">
+        <FontToggle />
+      </div>
+      <section aria-label="Blog post list" class="mt-1">
+        <ul class="space-y-1">
+          {page.data.length === 0 && <p>no posts yet...</p>}
+          {
+            page.data.map(p => (
+              <li>
+                <div class="mb-1 flex flex-col md:flex-row">
+                  {p.data.cover && (
+                    <div class="w-full shrink-0 md:w-10">
+                      <Image src={p.data.cover.src} alt={p.data.cover.alt} />
+                    </div>
+                  )}
+                  <div class="space-y-1">
+                    <a
+                      href={`/blog/${p.slug}`}
+                      class={`readable:font-bold block ${colors[p.data.color].text} outline-none hover:${colors[p.data.color].bg} hover:${colors[p.data.color].textHover} focus-visible:${colors[p.data.color].bg} focus-visible:${colors[p.data.color].textHover}`}
+                    >
+                      {p.data.title}
+                    </a>
+                    <p class="text-grey-light">{p.data.description}</p>
+                    <div class="flex flex-row justify-end text-grey-dark">
+                      <FormattedDate
+                        date={p.data.updatedDate ?? p.data.pubDate}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-dashed" />
+              </li>
+            ))
+          }
+        </ul>
+        {
+          (prevUrl || nextUrl) && (
+            <nav class="mt-1 flex">
+              <span class="mr-1 text-grey-medium">
+                {currentPage}/{lastPage}
+              </span>
+              {prevUrl && (
+                <a
+                  class="justify-self-start bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+                  data-astro-prefetch
+                  href={prevUrl}
+                >
+                  <span aria-hidden="true">
+                    <Petscii index={31} />
+                  </span>
+                  prev
+                </a>
+              )}
+              <div class="grow" />
+              {nextUrl && (
+                <a
+                  class="justify-self-end bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+                  data-astro-prefetch
+                  href={nextUrl}
+                >
+                  next
+                  <span aria-hidden="true" class="inline-block -scale-x-100">
+                    <Petscii index={31} />
+                  </span>
+                </a>
+              )}
+            </nav>
+          )
+        }
+      </section>
+    </div>
+  </div>
+</Layout>

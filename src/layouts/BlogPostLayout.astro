@@ -1,0 +1,76 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TOC from '@/components/TOC.astro';
+import Layout from '@/layouts/Layout.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+import FontToggle from '@/components/FontToggle.astro';
+import { Image } from 'astro:assets';
+import Petscii from '@/components/Petscii.astro';
+import { colors, getColorFromString } from '@/utils/colors';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const {
+  data: { description, cover, pubDate, title, updatedDate },
+} = post;
+const { headings } = await post.render();
+---
+
+<Layout title={title} description={description}>
+  <section
+    class="smoothing-none readable:font-sans readable:text-lg container px-1 py-4 font-c64pm text-px16 leading-6"
+  >
+    <article class="flex flex-col justify-center lg:flex-row-reverse">
+      {
+        !!headings.length && (
+          <div class="lg:pl-1">
+            <aside class="top-1 space-y-1 lg:sticky">
+              <div class="flex justify-end">
+                <a
+                  href="/blog"
+                  class="inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+                >
+                  <span aria-hidden="true">
+                    <Petscii index={31} />
+                  </span>
+                  back
+                </a>
+              </div>
+              <div>
+                <FontToggle />
+              </div>
+              <TOC headings={headings} />
+            </aside>
+          </div>
+        )
+      }
+      <div class="space-y-1 lg:max-w-screen-md">
+        {cover && <Image alt={cover.alt} src={cover.src} />}
+        <h1 class={`readable:font-bold ${colors[post.data.color].text}`}>
+          {title}
+        </h1>
+        <div class="flex flex-wrap gap-x-1 text-grey-dark">
+          <span>
+            <FormattedDate date={pubDate} />
+          </span>
+          {
+            updatedDate && (
+              <span>
+                UPD:
+                <FormattedDate date={updatedDate} />
+              </span>
+            )
+          }
+        </div>
+        <p class="text-grey-medium">{description}</p>
+        <hr class="border-dashed" />
+        <div class="prose">
+          <slot />
+        </div>
+      </div>
+    </article>
+  </section>
+</Layout>

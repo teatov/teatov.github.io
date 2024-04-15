@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -25,19 +26,13 @@ export default {
       'blue-light': '#706deb',
       'grey-light': '#b2b2b2',
     },
-    fontFamily: {
-      c64p: ["'C64 Pro Local'", ...fontFamily.sans],
-      c64pm: ["'C64 Pro Mono Local'", ...fontFamily.mono],
-    },
-    fontSize: {
-      px8: ['6pt', '8px'],
-      px16: ['12pt', '16px'],
-      px24: ['18pt', '24px'],
-      px34: ['24pt', '32px'],
-      px40: ['30pt', '40px'],
+    borderWidth: {
+      DEFAULT: '1em',
+      '0.5': '0.5em',
     },
     spacing: {
       '0': '0em',
+      '0.5': '0.5em',
       '1': '1em',
       '2': '2em',
       '3': '3em',
@@ -46,10 +41,30 @@ export default {
       '6': '6em',
       '8': '8em',
       '10': '10em',
+      '14': '14em',
       '15': '15em',
       '17': '17em',
       '18': '18em',
       '20': '20em',
+      '40': '40em',
+    },
+    extend: {
+      fontFamily: {
+        c64p: ["'C64 Pro Local'", ...fontFamily.sans],
+        c64pm: ["'C64 Pro Mono Local'", ...fontFamily.mono],
+      },
+      fontSize: {
+        px8: ['6pt', '8px'],
+        px16: ['12pt', '16px'],
+        px24: ['18pt', '24px'],
+        px34: ['24pt', '32px'],
+        px40: ['30pt', '40px'],
+      },
     },
   },
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('readable', '.readable &');
+    }),
+  ],
 } satisfies Config;

@@ -1,0 +1,46 @@
+<label for="readableFontToggle">
+  <button
+    id="readableFontToggle"
+    class="outline-none hover:bg-grey-dark hover:text-grey-light focus-visible:bg-grey-dark focus-visible:text-grey-light"
+  >
+    <span class="select-none" aria-hidden="true"
+      >[<span id="readableFontMark" class="invisible">X</span>]</span
+    >
+  </button>
+  readable font
+</label>
+
+<script>
+  const readableFont = (() => {
+    if (
+      typeof localStorage !== 'undefined' &&
+      localStorage.getItem('readableFont')
+    ) {
+      return localStorage.getItem('readableFont');
+    }
+    return 'off';
+  })();
+
+  if (readableFont === 'off') {
+    document.documentElement.classList.remove('readable');
+    document.getElementById('readableFontMark')?.classList.add('invisible');
+  } else {
+    document.documentElement.classList.add('readable');
+    document.getElementById('readableFontMark')?.classList.remove('invisible');
+  }
+
+  window.localStorage.setItem('readableFont', readableFont ?? '');
+
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    element?.classList.toggle('readable');
+    document.getElementById('readableFontMark')?.classList.toggle('invisible');
+
+    const isReadable = element?.classList.contains('readable');
+    localStorage.setItem('readableFont', isReadable ? 'on' : 'off');
+  };
+
+  document
+    ?.getElementById('readableFontToggle')
+    ?.addEventListener('click', handleToggleClick);
+</script>

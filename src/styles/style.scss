@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'C64 Pro Mono Local';
+  src: url(/C64_Pro_Mono-STYLE.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'C64 Pro Local';
+  src: url(/C64_Pro-STYLE.woff2) format('woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    @apply bg-blue-dark text-white;
+  }
+
+  hr {
+    @apply border-t-0.5 border-grey-dark;
+  }
+
+  .prose {
+    @apply readable:font-sans space-y-1 break-words font-c64p text-grey-light;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply readable:font-bold px-1 text-white;
+    }
+
+    h1,
+    h2 {
+      @apply py-1;
+    }
+
+    h3 {
+      @apply py-0.5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      @apply bg-grey-dark;
+    }
+
+    code {
+      @apply readable:font-mono font-c64pm;
+    }
+
+    a {
+      @apply text-cyan outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark;
+    }
+
+    blockquote {
+      @apply border-l-0.5 border-grey-dark py-1 pl-1;
+    }
+
+    tr {
+      @apply border-t-0.5 border-grey-dark;
+    }
+
+    th {
+      @apply border-0.5 p-0.5 border-grey-dark text-left;
+    }
+
+    td {
+      @apply border-0.5 p-0.5 border-grey-dark;
+    }
+
+    ul {
+      @apply ml-1 list-inside list-[square] [&>li]:mt-1;
+    }
+
+    ol {
+      @apply ml-1 list-inside list-decimal [&>li]:mt-1;
+
+      p {
+        @apply inline;
+      }
+    }
+  }
+}
+
+@layer components {
+  .smoothing-none {
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .scroll {
+    animation: scroll 4s linear infinite;
+    animation-timing-function: steps(20, end);
+  }
+}
+
+pre[class*='language-'],
+code[class*='language-'] {
+  @apply whitespace-pre text-wrap break-words text-grey-light;
+}
+
+pre[class*='language-'] {
+  @apply border-0.5 border-grey-dark p-1;
+}
+
+:not(pre) > code {
+  @apply bg-grey-dark text-white;
+}
+
+.token {
+  @apply inline-block;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-grey-light;
+}
+
+.token.punctuation {
+  @apply text-white;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-red-light;
+}
+
+.token.boolean,
+.token.number {
+  @apply text-cyan;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-green-light;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  @apply text-blue-light;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+  @apply text-yellow;
+}
+
+.token.keyword {
+  @apply text-blue-light;
+}
+
+.token.regex,
+.token.important {
+  @apply text-yellow;
+}
