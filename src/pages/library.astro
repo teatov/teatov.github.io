@@ -1,0 +1,91 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import TreeItem, { type TreeDirectory } from '@/components/TreeItem.astro';
+import musicTree from '@/lib/musicTree.json';
+import Petscii from '@/components/Petscii.astro';
+
+type TreeSummary = {
+  type: 'report';
+  directories: number;
+  files: number;
+};
+
+const root = musicTree[0] as TreeDirectory;
+const summary = musicTree[1] as TreeSummary;
+---
+
+<Layout
+  title="Teatov's huge ass music library"
+  description="A list of all the music that I have"
+>
+  <div>
+    <a
+      href="/"
+      class="mb-1 inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+    >
+      <span aria-hidden="true"><Petscii index={31} /></span> back</a
+    >
+    <p>Welcome to my huge ass list of all the music that I have.</p>
+    <p>
+      I believe that the best way to listen to music is to have it on your hard
+      drive.
+    </p>
+    <p>
+      Also I really, really like sharing stuff that I like, so here's a tree
+      view of my <code>Music</code> directory.
+    </p>
+    <p class="mt-1">
+      I've been gathering music for my whole life, so there's A LOT.
+    </p>
+    <p>
+      So it's not really convenient as a recommendation playlist. <br />
+      But you still can try looking up anything that may pick your interest.
+    </p>
+    <p class="mt-1">
+      I wish I could provide links for all of it, but it would be an insane task
+      since there's so much, <br />
+      but I'll try my best to at least add links and info for the more obscure stuff.
+    </p>
+    <p class="mt-1">
+      All the tracks are divided into 5 categories. The names are pretty
+      self-explanatory,<br />
+      but <code>mashups</code> can mean any sort of remixes and also include SiIvaGunner,<br
+      />
+      and <code>youtube music</code> includes anything I specifically found on YouTube
+      or strongly associate with it.
+    </p>
+    <p class="mt-1">
+      Directories with names starting with <code>_</code> are groups. <br />
+      They are pretty arbitrary, be it by franchise, studio, artist or just vibes.
+    </p>
+    <p class="mt-1">
+      <em>
+        Summary: {summary.files} files, {summary.directories} directories. Last updated:
+        26 August 2024.
+      </em>
+    </p>
+    <button
+      id="toggle-items"
+      class="bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+      >expand/collapse all</button
+    >
+    <div class="mt-1">
+      <TreeItem directory={root} />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  function toggleItems() {
+    document.body.querySelectorAll('details').forEach((e) => {
+      e.hasAttribute('open')
+        ? e.removeAttribute('open')
+        : e.setAttribute('open', 'true');
+      console.log(e.hasAttribute('open'));
+    });
+  }
+
+  document
+    .getElementById('toggle-items')
+    ?.addEventListener('click', toggleItems);
+</script>

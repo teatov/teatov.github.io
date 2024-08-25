@@ -1,0 +1,78 @@
+---
+import musicInfo from '@/lib/musicInfo.json';
+
+export type TreeFile = {
+  type: 'file';
+  name: string;
+};
+
+export type TreeDirectory = {
+  type: 'directory';
+  name: string;
+  contents: (TreeDirectory | TreeFile)[];
+};
+
+export type TrackInfo = {
+  link: string;
+  info: string;
+};
+
+interface Props {
+  directory: TreeDirectory;
+}
+
+const { directory } = Astro.props;
+---
+
+<details>
+  <summary
+    class="cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white"
+    >{directory.name}</summary
+  >
+  <div class="ml-1">
+    {
+      directory.contents
+        .sort((a, b) =>
+          a.type !== b.type
+            ? a.type.localeCompare(b.type, undefined, { numeric: true })
+            : a.name.localeCompare(b.name, undefined, { numeric: true })
+        )
+        .map((item) => {
+          if (item.type === 'file') {
+            const name = item.name.replace(/\.[^/.]+$/, '');
+            const info = musicInfo[name as keyof typeof musicInfo] as
+              | TrackInfo
+              | undefined;
+            return (
+              <div class="relative">
+                <div>
+                  {name}
+                  {info && info.link && (
+                    <a
+                      href={info.link}
+                      class="ml-1 text-cyan outline-none hover:bg-blue-dark hover:text-white focus-visible:bg-blue-dark focus-visible:text-white"
+                      rel="nofollow, noopener, noreferrer"
+                    >
+                      link!
+                    </a>
+                  )}
+                </div>
+                {info && info.info && (
+                  <details>
+                    <summary class="absolute -top-0 right-0 cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white">
+                      info!
+                    </summary>
+                    <p class="prose max-w-40 bg-grey-dark">
+                      <Fragment set:html={info.info} />
+                    </p>
+                  </details>
+                )}
+              </div>
+            );
+          } else if (item.type === 'directory' && item.contents) {
+            return <Astro.self directory={item} />;
+          }
+        })
+    }
+  </div>
+</details>

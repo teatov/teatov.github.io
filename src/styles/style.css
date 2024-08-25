@@ -16,12 +16,13 @@
     @apply bg-blue-dark text-white;
   }
 
-  hr {
-    @apply border-t-0.5 border-grey-dark;
-  }
-
+  
   .prose {
-    @apply readable:font-sans space-y-1 break-words font-c64p text-grey-light;
+    @apply space-y-1 break-words;
+    
+    hr {
+      @apply border-t-0.5 border-grey-dark;
+    }
 
     h1,
     h2,
