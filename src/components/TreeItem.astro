@@ -12,7 +12,7 @@ export type TreeDirectory = {
   contents: (TreeDirectory | TreeFile)[];
 };
 
-export type TrackInfo = {
+export type ItemInfo = {
   link: string;
   info: string;
 };
@@ -22,13 +22,42 @@ interface Props {
 }
 
 const { directory } = Astro.props;
+const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
+  | ItemInfo
+  | undefined;
 ---
 
 <details>
   <summary
-    class="cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white"
-    >{directory.name}</summary
+    class="relative cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white"
   >
+    <span>{directory.name}</span>
+    {
+      directoryInfo && directoryInfo.info && (
+        <details>
+          <summary class="absolute -top-0 right-4 cursor-pointer bg-black text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white">
+            info!
+          </summary>
+          <p class="prose max-w-40 bg-grey-dark text-white">
+            <Fragment set:html={directoryInfo.info} />
+          </p>
+        </details>
+      )
+    }
+    {
+      directoryInfo && directoryInfo.link && (
+        <div class="absolute -top-0 right-0">
+          <a
+            href={directoryInfo.link}
+            class="bg-black text-cyan outline-none hover:bg-blue-dark hover:text-white focus-visible:bg-blue-dark focus-visible:text-white"
+            rel="nofollow, noopener, noreferrer"
+          >
+            link!
+          </a>
+        </div>
+      )
+    }
+  </summary>
   <div class="ml-1">
     {
       directory.contents
@@ -40,32 +69,32 @@ const { directory } = Astro.props;
         .map((item) => {
           if (item.type === 'file') {
             const name = item.name.replace(/\.[^/.]+$/, '');
-            const info = musicInfo[name as keyof typeof musicInfo] as
-              | TrackInfo
+            const trackInfo = musicInfo[name as keyof typeof musicInfo] as
+              | ItemInfo
               | undefined;
             return (
               <div class="relative">
-                <div>
-                  {name}
-                  {info && info.link && (
+                <p>{name}</p>
+                {trackInfo && trackInfo.info && (
+                  <details>
+                    <summary class="absolute -top-0 right-4 cursor-pointer bg-black text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white">
+                      info!
+                    </summary>
+                    <p class="prose max-w-40 bg-grey-dark">
+                      <Fragment set:html={trackInfo.info} />
+                    </p>
+                  </details>
+                )}
+                {trackInfo && trackInfo.link && (
+                  <div class="absolute -top-0 right-0">
                     <a
-                      href={info.link}
-                      class="ml-1 text-cyan outline-none hover:bg-blue-dark hover:text-white focus-visible:bg-blue-dark focus-visible:text-white"
+                      href={trackInfo.link}
+                      class="bg-black text-cyan outline-none hover:bg-blue-dark hover:text-white focus-visible:bg-blue-dark focus-visible:text-white"
                       rel="nofollow, noopener, noreferrer"
                     >
                       link!
                     </a>
-                  )}
-                </div>
-                {info && info.info && (
-                  <details>
-                    <summary class="absolute -top-0 right-0 cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white">
-                      info!
-                    </summary>
-                    <p class="prose max-w-40 bg-grey-dark">
-                      <Fragment set:html={info.info} />
-                    </p>
-                  </details>
+                  </div>
                 )}
               </div>
             );
