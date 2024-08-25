@@ -9,7 +9,7 @@ import { nChars } from '@/utils/petscii';
   title="Anatoly Titov"
   description="Hi, I'm Anatoly: a fullstack web dev, a hobbyist game dev and a 3D artist."
 >
-  <div class="smoothing-none text-nowrap font-c64pm text-px16 sm:text-px24">
+  <div class="smoothing-none font-c64pm text-px16 sm:text-px24">
     <div class="text-grey-light sm:-ml-1">Hi, I'm</div>
     <div title="Anatoly" aria-label="Anatoly:">
       <div aria-hidden="true"><Petscii matrix={anatoly} /></div>
@@ -36,7 +36,7 @@ import { nChars } from '@/utils/petscii';
         </span> ... and a 3D artist
       </li>
     </ul>
-    <div class="mt-1 flex h-3 flex-col sm:flex-row">
+    <div class="mb-1 mt-1 flex flex-col sm:flex-row">
       <div class="relative ml-2 w-17 sm:-ml-1">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
           <Petscii matrix={socialBox(5, 4, 2)} />
@@ -95,16 +95,12 @@ import { nChars } from '@/utils/petscii';
         </div>
       </div>
     </div>
-    <div class="ml-2 mt-8 sm:ml-4 sm:mt-4">
-      <div class="text-grey-light">
-        >teatov@<span class="hidden">FUCK EMAIL HARVESTERS</span>proton.me
-      </div>
-      <div
-        class="ml-1 w-full select-none overflow-hidden text-red-dark"
-        aria-hidden="true"
+    <div class="w-21 sm:w-26">
+      I'm currently making games at <a
+        href="https://23cmline.com/en/"
+        class="bg-grey-medium outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
+        >23 Centimetre Line</a
       >
-        <Petscii matrix={[[...nChars(16, 104)]]} />
-      </div>
     </div>
   </div>
 </Layout>
