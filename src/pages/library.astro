@@ -77,8 +77,8 @@ const summary = musicTree[1] as TreeSummary;
 
 <script>
   function toggleItems() {
-    const open = document.body.querySelector('details')?.hasAttribute('open');
-    document.body.querySelectorAll('details').forEach((e) => {
+    const open = document.body.querySelector('details.tree-item')?.hasAttribute('open');
+    document.body.querySelectorAll('details.tree-item').forEach((e) => {
       open ? e.removeAttribute('open') : e.setAttribute('open', 'true');
     });
   }
