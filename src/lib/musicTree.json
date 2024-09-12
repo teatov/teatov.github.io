@@ -2017,6 +2017,52 @@
         ]}
       ]},
       {"type":"file","name":"Cynthia Harrel - Snake Eater.mp3"},
+      {"type":"directory","name":"Danganronpa","contents":[
+        {"type":"file","name":"1-01 Trigger Happy Havoc.mp3"},
+        {"type":"file","name":"1-02 Danganronpa!.mp3"},
+        {"type":"file","name":"1-03 Punishment Rocket.mp3"},
+        {"type":"file","name":"1-04 Beautiful Days.mp3"},
+        {"type":"file","name":"1-05 Beautiful Death.mp3"},
+        {"type":"file","name":"1-06 Class Trial (Dawn).mp3"},
+        {"type":"file","name":"1-07 Mr. Monokuma After Class.mp3"},
+        {"type":"file","name":"1-08 Box 15.mp3"},
+        {"type":"file","name":"1-09 100 Mile Junk Food Dash.mp3"},
+        {"type":"file","name":"1-10 Distrust.mp3"},
+        {"type":"file","name":"1-11 Thousand Knocks.mp3"},
+        {"type":"file","name":"1-12 Death Wish.mp3"},
+        {"type":"file","name":"1-13 To Survive.mp3"},
+        {"type":"file","name":"1-14 Motorcycle Death Cage.mp3"},
+        {"type":"file","name":"1-15 Underground Trial.mp3"},
+        {"type":"file","name":"1-16 Btb.mp3"},
+        {"type":"file","name":"1-17 Argument (Break).mp3"},
+        {"type":"file","name":"1-19 Despair Syndrome (2).mp3"},
+        {"type":"file","name":"1-20 Versailles Burning At the Stake Witch Hunt Preperations.mp3"},
+        {"type":"file","name":"1-21 Boys' Life of Despair.mp3"},
+        {"type":"file","name":"1-22 Super Btb.mp3"},
+        {"type":"file","name":"1-23 Welcome to Despair.mp3"},
+        {"type":"file","name":"1-24 Master of Shovel.mp3"},
+        {"type":"file","name":"1-25 Extra Lessons for the Unlucky.mp3"},
+        {"type":"file","name":"1-26 Beautiful Morning.mp3"},
+        {"type":"file","name":"1-27 Closing Argument.mp3"},
+        {"type":"file","name":"2-01 Trigger Happy Havoc (Dr Version).mp3"},
+        {"type":"file","name":"2-03 Mr. Monokuma's Lesson.mp3"},
+        {"type":"file","name":"2-04 Despair Syndrome (1).mp3"},
+        {"type":"file","name":"2-05 Super Final Btb.mp3"},
+        {"type":"file","name":"2-06 Box 16.mp3"},
+        {"type":"file","name":"2-07 Discussion (Mix) [Edge Version].mp3"},
+        {"type":"file","name":"2-08 Class Trial (Chaos).mp3"},
+        {"type":"file","name":"2-09 Class Trial (The Sun).mp3"},
+        {"type":"file","name":"2-10 Argument (Turn Up the Heat).mp3"},
+        {"type":"file","name":"2-11 Hangman's Gambit.mp3"},
+        {"type":"file","name":"2-12 Argument (Hope vs Despair).mp3"},
+        {"type":"file","name":"2-13 Extra Lessons for the Mysterious.mp3"},
+        {"type":"file","name":"2-14 All Star Apologies.mp3"},
+        {"type":"file","name":"2-15 Super High-School Level Despair.mp3"},
+        {"type":"file","name":"2-16 Climactic Re-Enactment.mp3"},
+        {"type":"file","name":"2-17 New World Order.mp3"},
+        {"type":"file","name":"2-18 Goodbye Despair High School.mp3"},
+        {"type":"file","name":"2-19 Reconstruction -rebuild-.mp3"}
+      ]},
       {"type":"directory","name":"_Daniel Mullins","contents":[
         {"type":"directory","name":"Pony Island","contents":[
           {"type":"file","name":"01. Pony Island.mp3"},
@@ -2533,6 +2579,7 @@
         {"type":"file","name":"122 The Unforgiving Desert.mp3"},
         {"type":"file","name":"123 Pyramid.mp3"},
         {"type":"file","name":"124 Inside the Dungeon.mp3"},
+        {"type":"file","name":"125 Megaton Walk.mp3"},
         {"type":"file","name":"126 The Submarine.mp3"},
         {"type":"file","name":"127 The Deep Darkness.mp3"},
         {"type":"file","name":"128 The Tendas' Cave.mp3"},
@@ -2958,6 +3005,46 @@
         {"type":"file","name":"4-01. Press Start.mp3"},
         {"type":"file","name":"4-02. Nock Em.mp3"},
         {"type":"file","name":"4-03. Power Trip.mp3"}
+      ]},
+      {"type":"directory","name":"Ghost Trick","contents":[
+        {"type":"file","name":"1-01. Prelude - The “Night” Begins.mp3"},
+        {"type":"file","name":"1-02. Ghost Trick.mp3"},
+        {"type":"file","name":"1-03. 《4 Minutes Before Death》.mp3"},
+        {"type":"file","name":"1-04. 《Changing Fate》.mp3"},
+        {"type":"file","name":"1-05. Count Down.mp3"},
+        {"type":"file","name":"1-06. The World of the Dead.mp3"},
+        {"type":"file","name":"1-07. Lynne - Red-Headed Target.mp3"},
+        {"type":"file","name":"1-08. Ray - A Ray of Light.mp3"},
+        {"type":"file","name":"1-09. Awakening.mp3"},
+        {"type":"file","name":"1-10. Welcome to My Parlor.mp3"},
+        {"type":"file","name":"1-11. Complication.mp3"},
+        {"type":"file","name":"1-12. Missile - Valiant Pet.mp3"},
+        {"type":"file","name":"1-13. Madam - Perfumed Lady.mp3"},
+        {"type":"file","name":"1-14. Chicken Paradise.mp3"},
+        {"type":"file","name":"1-15. Darkness.mp3"},
+        {"type":"file","name":"1-16. The Incarcerated.mp3"},
+        {"type":"file","name":"1-17. The Mystery Surges Ahead.mp3"},
+        {"type":"file","name":"1-18. Cabanela - Lanky and Loose Lawman.mp3"},
+        {"type":"file","name":"1-19. Scars of Trauma.mp3"},
+        {"type":"file","name":"1-20. Jingle.mp3"},
+        {"type":"file","name":"2-01. Interlude - The “Night” Deepens.mp3"},
+        {"type":"file","name":"2-02. Eternal Providence.mp3"},
+        {"type":"file","name":"2-03. 《4 Minutes Before Death》 Variation.mp3"},
+        {"type":"file","name":"2-04. 《Changing Fate》 Variation.mp3"},
+        {"type":"file","name":"2-05. Suspicion.mp3"},
+        {"type":"file","name":"2-06. Lamentations of a Careworn Gentleman.mp3"},
+        {"type":"file","name":"2-07. Chase.mp3"},
+        {"type":"file","name":"2-08. Beauty and Dandy.mp3"},
+        {"type":"file","name":"2-09. Dead Line Deadline.mp3"},
+        {"type":"file","name":"2-10. To Nothingness....mp3"},
+        {"type":"file","name":"2-11. Jowd - Fated Jailbird.mp3"},
+        {"type":"file","name":"2-12. Our Linked Pasts.mp3"},
+        {"type":"file","name":"2-13. Specters of Sissel.mp3"},
+        {"type":"file","name":"2-14. Words of Parting.mp3"},
+        {"type":"file","name":"2-15. The Final Struggle.mp3"},
+        {"type":"file","name":"2-16. Reincarnation.mp3"},
+        {"type":"file","name":"2-17. Finale - The “Night” Ends.mp3"},
+        {"type":"file","name":"2-18. Ghost World.mp3"}
       ]},
       {"type":"directory","name":"Going Under","contents":[
         {"type":"file","name":"01. monorail hype.mp3"},
@@ -4513,7 +4600,6 @@
         {"type":"file","name":"12 - Story 2.mp3"},
         {"type":"file","name":"14 - Game Ending.mp3"}
       ]},
-      {"type":"file","name":"Masakazu Sugimori - GHOST TRICK.mp3"},
       {"type":"directory","name":"Metropolis Street Racer","contents":[
         {"type":"file","name":"01 Am I Only Dreaming.mp3"},
         {"type":"file","name":"02 Heartland.mp3"},
@@ -6417,7 +6503,6 @@
         {"type":"file","name":"28. Wow, Waterless Teacup!.mp3"},
         {"type":"file","name":"29. Wow, Waterless Corpse!.mp3"},
         {"type":"file","name":"30. The Seventh Mystery.mp3"},
-        {"type":"file","name":"31. Irrelevant Poem.mp3"},
         {"type":"file","name":"32. Infinity Red Balloons.mp3"},
         {"type":"file","name":"33. Idiot Contest.mp3"},
         {"type":"file","name":"34. The Sixteenth Mystery.mp3"},
@@ -9758,7 +9843,8 @@
             {"type":"file","name":"41. Dialtone.mp3"},
             {"type":"file","name":"45. Until Next Time.mp3"},
             {"type":"file","name":"5. Queen.mp3"},
-            {"type":"file","name":"6. A CYBER'S WORLD.mp3"}
+            {"type":"file","name":"6. A CYBER'S WORLD.mp3"},
+            {"type":"file","name":"WELCOME_TO_THE_CITY_music_alternate.mp3"}
           ]}
         ]},
         {"type":"directory","name":"Undertale","contents":[
@@ -10660,6 +10746,7 @@
       {"type":"file","name":"Atominizer  - Radial (Alpha Version).mp3"},
       {"type":"file","name":"boneghouls - [BIG SHOT]'s World.mp3"},
       {"type":"file","name":"Cult of Silence - Yoshi's Island - Flower Garden.mp3"},
+      {"type":"file","name":"EXT4NT - エッグロック (EGGROCK)【音MAD】.mp3"},
       {"type":"directory","name":"hashtagmashup","contents":[
         {"type":"file","name":"Adil Kumisbekov - Hill Climb Racing + Nightcall.mp3"},
         {"type":"file","name":"an00bis - Icarus Potential.mp3"},
@@ -10705,6 +10792,7 @@
         {"type":"file","name":"неплохая пица - фрустрация шуфутинского в баре вальхалла.mp3"},
         {"type":"file","name":"осторожно постмодерн - пастушенко маст дай.mp3"}
       ]},
+      {"type":"file","name":"Jimmy Davis - YTP - The Decayer App.mp3"},
       {"type":"file","name":"MaidRips (The 11th One) - Concepts In The Desert.mp3"},
       {"type":"file","name":"Pacifix Fox - Knigink Of The Winiw.mp3"},
       {"type":"file","name":"Pixel​Cherries - Minecraft - Sweden (Persona 5 Style Cover).mp3"},
@@ -10943,10 +11031,52 @@
           {"type":"file","name":"99. Bowflex Crew - Bowflex for the 26th Century.mp3"}
         ]},
         {"type":"file","name":"Enysmo - Concept of Love (Concept of Everything Mix).mp3"},
+        {"type":"file","name":"Hinchy (+ special thanks to Marioshi) - A Ghost's Bean Soup.mp3"},
         {"type":"file","name":"J-MUSIC Ensemble - Teknopathetic.mp3"},
         {"type":"file","name":"Madinstance - I will Never be a Redneck.mp3"},
         {"type":"file","name":"MELOHAVOC ft. SHUTDOWN​​Visualizer - ghostfunkers.mp3"},
         {"type":"file","name":"Mr Lange - John Madden.mp3"},
+        {"type":"file","name":"MtH - Sea Dev-Will Change!.mp3"},
+        {"type":"file","name":"Netyasha Roozi - Divinecraft.mp3"},
+        {"type":"directory","name":"SGFR Presents BOMBERTRACKS","contents":[
+          {"type":"file","name":"01. DM DOKURO - 1.mp3"},
+          {"type":"file","name":"02. Monochrome - Loading....mp3"},
+          {"type":"file","name":"03. ludosmo - Welcome_『Bomberman』.mp3"},
+          {"type":"file","name":"04. Edgi - SUPERNOVA BOMBERGIRL.mp3"},
+          {"type":"file","name":"05. COCONABE - EXPLOSIONS! CHAOS!.mp3"},
+          {"type":"file","name":"06. Monochrome - B-52.mp3"},
+          {"type":"file","name":"07. itembox - 7zip.mp3"},
+          {"type":"file","name":"08. Monochrome - Dastardly Detonation.mp3"},
+          {"type":"file","name":"09. Edgi - Now departing for battle point....mp3"},
+          {"type":"file","name":"10. DM DOKURO - HHHH (Hectic Hige Hige Heaven).mp3"},
+          {"type":"file","name":"11. livvy94 - Slam Jammin_ Sea.mp3"},
+          {"type":"file","name":"12. ludosmo - Ceremony of Celebrations!!.mp3"},
+          {"type":"file","name":"13. DonnieTheGuy - Wild Wild Bomber.mp3"},
+          {"type":"file","name":"14. Ellie53 - when the bomberman is on land idk ive never played the game (3).mp3"},
+          {"type":"file","name":"15. Izzyience - Planet Forest [ The Weather Channel Mix ].mp3"},
+          {"type":"file","name":"16. Edgi - BOOM!! Thunderous Approach.mp3"},
+          {"type":"file","name":"17. DM DOKURO - HERE COMES THE TWISTER.mp3"},
+          {"type":"file","name":"18. Monochrome - blowout.mp3"},
+          {"type":"file","name":"19. ludosmo - 『OPTIONS』.mp3"},
+          {"type":"file","name":"20. Monochrome - Launch Codes.mp3"},
+          {"type":"file","name":"21. Edgi - d.u.d..mp3"},
+          {"type":"file","name":"22. Memmy - are you entertained_.mp3"},
+          {"type":"file","name":"23. DM DOKURO - FFFFFF_FF00AA.mp3"},
+          {"type":"file","name":"24. Monochrome - WAHmberman.mp3"},
+          {"type":"file","name":"25. DM DOKURO - opalesce.mp3"},
+          {"type":"file","name":"26. SHUTDOWN-Visualizer - Redial (I ran out of budget Mix).mp3"},
+          {"type":"file","name":"27. DM DOKURO - LAST ONE STANDING.mp3"},
+          {"type":"file","name":"28. DM DOKURO - voluminous, volatile void.mp3"},
+          {"type":"file","name":"29. Smoky - What_s the DEAL with airline bombs_.mp3"},
+          {"type":"file","name":"30. Midnight - ̶O̶P̶T̶I̶O̶N̶S̶C̶O̶R̶E̶.mp3"},
+          {"type":"file","name":"31. Edgi, Eazy - Can’t Defuse My Soul.mp3"},
+          {"type":"file","name":"32. Sebastian Kingsley - Chaos Bomber, Lord of the Four Commanders.mp3"},
+          {"type":"file","name":"33. Edgi, ludosmo, Sebastian Kingsley, rinaten, xinos - Dreams of My Elegant Hero.mp3"},
+          {"type":"file","name":"34. ludosmo, Monochrome, akaru - love letter.mp3"},
+          {"type":"file","name":"35. itembox - goodnight, bombergirl.mp3"},
+          {"type":"file","name":"36. Grambam & The Bombers - Redial Fusion Collab.mp3"},
+          {"type":"file","name":"37. Edgi - Can’t Defuse My Soul (Instrumental).mp3"}
+        ]},
         {"type":"file","name":"SHUTDOWNVisualizer - Gimme a Chance (CHANCE CHANCE Super Mix).mp3"},
         {"type":"directory","name":"SiIvaGunner Starter Kit & Essentials","contents":[
           {"type":"file","name":"10. Wood Man and the Very Nice Robot Masters - Wood Man Fusion Collab.mp3"},
@@ -11038,9 +11168,14 @@
         ]},
         {"type":"file","name":"The Big Beat Mario Fan Club - Big Beat Radio.mp3"},
         {"type":"file","name":"The GG's - One-Winged DJ.mp3"},
-        {"type":"file","name":"toonlink - Reslider.mp3"}
+        {"type":"file","name":"The Robinsons - Goodbye to a World Fusion Collab.mp3"},
+        {"type":"file","name":"toonlink - Reslider.mp3"},
+        {"type":"file","name":"trivial171, wolfman1405, dante, SungHa Hong, yodooder - Weight Will Change (Dancing Star Night Version).mp3"}
       ]},
       {"type":"file","name":"Tina the Cyclops girl - vs. SAYU.mp3"},
+      {"type":"file","name":"Triple-Q - Here Comes The Snow.mp3"},
+      {"type":"file","name":"Triple-Q - Life is a Comedy.mp3"},
+      {"type":"file","name":"Triple-Q - Mr. Knuckles' Hullabaloo.mp3"},
       {"type":"file","name":"Waddoop - BOMB RUSH CYBERBLUSH [Mashup Remix].mp3"},
       {"type":"file","name":"Waddoop - Eggman's Announcement but it's a popular disco song.mp3"}
     ]},
@@ -11488,6 +11623,7 @@
         ]}
       ]},
       {"type":"file","name":"Buffalo Springfield - For What It's Worth.mp3"},
+      {"type":"file","name":"Buzzcocks - Why Can't I Touch It (Muzdo.net).mp3"},
       {"type":"directory","name":"C418","contents":[
         {"type":"directory","name":"148","contents":[
           {"type":"file","name":"10. Vierton.mp3"},
@@ -11721,6 +11857,7 @@
         {"type":"file","name":"death's dynamic shroud - Heavy Black Heart - 08 South God Queen.mp3"},
         {"type":"file","name":"death's dynamic shroud - Heavy Black Heart - 09 Dream Argument.mp3"}
       ]},
+      {"type":"file","name":"De-Phazz - The Mambo Craze.mp3"},
       {"type":"directory","name":"Dkay","contents":[
         {"type":"file","name":"DJ Die - Autumn - Commix Remix.webm"},
         {"type":"file","name":"Dkay - Black Magic.mp3"},
@@ -12120,6 +12257,7 @@
       {"type":"file","name":"Favored Nations - The Set Up.mp3"},
       {"type":"file","name":"Fever The Ghost - Source.mp3"},
       {"type":"file","name":"Flamingosis - Brunch At The Bodega.mp3"},
+      {"type":"file","name":"Fox Stevenson - Bruises.mp3"},
       {"type":"file","name":"Frizk - All My Fellas.mp3"},
       {"type":"directory","name":"Funk Fiction","contents":[
         {"type":"directory","name":"Sonic BeATS","contents":[
@@ -12188,6 +12326,7 @@
       {"type":"file","name":"Gone Jackals, The - Legacy.mp3"},
       {"type":"file","name":"Half-Handed Cloud - Nativity Costume (2000 Year's Eve).mp3"},
       {"type":"file","name":"Her's - Harvey.mp3"},
+      {"type":"file","name":"Hilltop Hoods - The Nosebleed Section.mp3"},
       {"type":"file","name":"HOME - Resonance.mp3"},
       {"type":"file","name":"HOME - We're Finally Landing.mp3"},
       {"type":"file","name":"Houses - Fast Talk.mp3"},
@@ -12584,7 +12723,12 @@
           {"type":"file","name":"Wolpis Kater - Oxalis.mp3"},
           {"type":"file","name":"Yukopi - 強風オールバック (feat.歌愛ユキ).mp3"},
           {"type":"file","name":"ハチ (Hachi) feat. Hatsune Miku & GUMI - Matryoshka, Матрёшка.mp3"}
-        ]}
+        ]},
+        {"type":"file","name":"Wienners - FACTION.mp3"},
+        {"type":"file","name":"Wienners - GOD SAVE THE MUSIC.mp3"},
+        {"type":"file","name":"Wienners - SHINOBI TOP SECRET.mp3"},
+        {"type":"file","name":"Wienners - SOLAR KIDS.mp3"},
+        {"type":"file","name":"Wienners - TOP SPEED.mp3"}
       ]},
       {"type":"directory","name":"_Jazz","contents":[
         {"type":"file","name":"Benny Goodman - Sing, Sing, Sing.mp3"},
@@ -12894,6 +13038,7 @@
       {"type":"file","name":"Mux Mool - Night Court.mp3"},
       {"type":"file","name":"Never Modern Talk - Count Five and Die.mp3"},
       {"type":"file","name":"Noob - Des lapins dans des chats (Petit abricot de Noob remixé par Odezenne).mp3"},
+      {"type":"file","name":"N.W.A. - Express Yourself.mp3"},
       {"type":"file","name":"ODESZA - A Moment Apart (camoufly Remix).mp3"},
       {"type":"file","name":"Pendulum - Watercolour.mp3"},
       {"type":"directory","name":"Peshay Studio Set","contents":[
@@ -12929,6 +13074,7 @@
       {"type":"file","name":"Raspberries - Go All The Way.mp3"},
       {"type":"file","name":"Reverend & The Makers - Heavyweight Champion of the World.mp3"},
       {"type":"file","name":"Rob Cantor - Shia LaBeouf.mp3"},
+      {"type":"file","name":"Sacha Sieff, Data - Mélodie.mp3"},
       {"type":"file","name":"Saib - Café.mp3"},
       {"type":"file","name":"Sitcom - Wake Up Jacob (feat. Orion Sun).mp3"},
       {"type":"file","name":"Spiderbait - Black Betty.mp3"},
@@ -12970,8 +13116,10 @@
         {"type":"file","name":"8. Frère Jean Jacques.mp3"},
         {"type":"file","name":"9. Brazilian Flower.mp3"}
       ]},
+      {"type":"file","name":"The Beths - I'm Not Getting Excited.mp3"},
       {"type":"file","name":"The Comet Is Coming - Ascension.mp3"},
       {"type":"file","name":"The Dramatics - Whatcha See Is Whatcha Get.mp3"},
+      {"type":"file","name":"The Garden - Sneaky Devil.mp3"},
       {"type":"file","name":"The Proclaimers - I'm Gonna Be (500 Miles).mp3"},
       {"type":"file","name":"The Wurzels - I Am a Cider Drinker (Paloma Blanca).mp3"},
       {"type":"file","name":"The Wurzels - The Combine Harvester (Brand New Key).mp3"},
@@ -13037,6 +13185,8 @@
       {"type":"file","name":"WOOZE - Hello Can You Go.mp3"},
       {"type":"file","name":"WOOZE - I'll Have What She's Having.mp3"},
       {"type":"file","name":"WOOZE - Ladies Who Lunch with Me.mp3"},
+      {"type":"file","name":"WOOZE - Mighty Cloud.mp3"},
+      {"type":"file","name":"WOOZE - Sabre Tooth Spider.mp3"},
       {"type":"file","name":"Wuh Oh - Hairstyle.mp3"},
       {"type":"file","name":"Yes - Roundabout.mp3"},
       {"type":"file","name":"Zackery Wilson - Digifood.mp3"},
@@ -13434,7 +13584,6 @@
         {"type":"file","name":"Louie Zong - edge of town.mp3"},
         {"type":"file","name":"Louie Zong - falling for you (a gravitational love song).mp3"},
         {"type":"file","name":"louie zong & friends - goose groove.mp3"},
-        {"type":"file","name":"Louie Zong - FURNITURE HELLSCAPE.mp3"},
         {"type":"file","name":"Louie Zong - ghost swing.mp3"},
         {"type":"file","name":"Louie Zong - I'll Sing Your Song (Hatsune Miku Barbershop Quartet).mp3"},
         {"type":"file","name":"Louie Zong - Je Te Veux (Satie) but it's groovy.mp3"},
@@ -13962,6 +14111,19 @@
         {"type":"file","name":"Scruffy - Sweet Mountain (Sonic Colors).mp3"},
         {"type":"file","name":"Scruffy - What I Love.mp3"}
       ]},
+      {"type":"directory","name":"SELECTED AMBIENT ZERKS","contents":[
+        {"type":"file","name":"fresh jerma, Enysmo - SELECTED AMBIENT ZERKS - 04 jeremy elbertson, proffesional twitch screamer.mp3"},
+        {"type":"file","name":"fresh jerma, HonestlySMH - SELECTED AMBIENT ZERKS - 01 CRITICAL streamer HATES SEGA but LOVES MIKU.mp3"},
+        {"type":"file","name":"fresh jerma, ms. plasma - SELECTED AMBIENT ZERKS - 02 TRY ANOTHER.mp3"},
+        {"type":"file","name":"fresh jerma - SELECTED AMBIENT ZERKS - 03 100 DAYS IN HARDCORE JERMACRAFT.mp3"},
+        {"type":"file","name":"fresh jerma - SELECTED AMBIENT ZERKS - 05 jerma fails the american bible challenge.mp3"},
+        {"type":"file","name":"fresh jerma - SELECTED AMBIENT ZERKS - 06 jermplextro.mp3"},
+        {"type":"file","name":"fresh jerma - SELECTED AMBIENT ZERKS - 08 the thing in the fridge is definetly not junjl-dnb mix.mp3"},
+        {"type":"file","name":"fresh jerma - SELECTED AMBIENT ZERKS - 11 I'M KILLING YOU (bonus track).mp3"},
+        {"type":"file","name":"lincore - SELECTED AMBIENT ZERKS - 07 jermasteria.mp3"},
+        {"type":"file","name":"lincore - SELECTED AMBIENT ZERKS - 09 attentiongrabber.mp3"},
+        {"type":"file","name":"querq - SELECTED AMBIENT ZERKS - 10 jermbient.mp3"}
+      ]},
       {"type":"file","name":"Surasshu - the penis (eek!).mp3"},
       {"type":"directory","name":"The 8-Bit Big Band","contents":[
         {"type":"directory","name":"Album 1 - Press Start!","contents":[
@@ -14091,5 +14253,5 @@
     ]}
   ]}
 ,
-  {"type":"report","directories":734,"files":12624}
+  {"type":"report","directories":738,"files":12778}
 ]
