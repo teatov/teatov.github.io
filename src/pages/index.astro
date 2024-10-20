@@ -37,9 +37,9 @@ import { nChars } from '@/utils/petscii';
       </li>
     </ul>
     <div class="mb-1 mt-1 flex flex-col sm:flex-row">
-      <div class="relative ml-2 w-17 sm:-ml-1">
+      <div class="relative w-20 sm:-ml-2">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
-          <Petscii matrix={socialBox(5, 4, 2)} />
+          <Petscii matrix={socialBox(5, 4, 4, 2)} />
         </div>
         <ul class="absolute ml-1 pt-1">
           <li class="ml-1 inline-block">
@@ -52,6 +52,14 @@ import { nChars } from '@/utils/petscii';
             >
           </li><li class="ml-1 inline-block">
             <a
+              href="https://bsky.app/profile/teatov.bsky.social"
+              class="inline-block bg-grey-dark outline-none hover:bg-blue-dark hover:text-cyan focus-visible:bg-blue-dark focus-visible:text-cyan"
+              title="Bluesky"
+              aria-label="Bluesky"
+              rel="nofollow, noopener, noreferrer">bsky</a
+            >
+          </li><li class="ml-1 inline-block">
+            <a
               href="https://github.com/teatov"
               class="inline-block bg-grey-dark outline-none hover:bg-purple hover:text-blue-dark focus-visible:bg-purple focus-visible:text-blue-dark"
               title="GitHub"
@@ -60,7 +68,7 @@ import { nChars } from '@/utils/petscii';
             >
           </li><li class="ml-1 inline-block">
             <a
-              href="https://vk.com/ateatov"
+              href="https://vk.com/teatov"
               class="inline-block bg-grey-dark outline-none hover:bg-blue-light hover:text-blue-dark focus-visible:bg-blue-light focus-visible:text-blue-dark"
               title="VK"
               aria-label="VK"
@@ -99,8 +107,8 @@ import { nChars } from '@/utils/petscii';
       I'm currently making games at <a
         href="https://23cmline.com/en/"
         class="bg-grey-medium outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
-        >23 Centimetre Line</a
-      >
+        >23&nbsp;Centimetre&nbsp;Line</a
+      >.
     </div>
   </div>
 </Layout>
