@@ -11,6 +11,7 @@ type TreeSummary = {
 };
 
 const root = musicTree[0] as TreeDirectory;
+root.name = '. (root)';
 const summary = musicTree[1] as TreeSummary;
 ---
 
@@ -49,8 +50,8 @@ const summary = musicTree[1] as TreeSummary;
     <p class="mt-1">
       You can use this to check if my tastes intersect with yours, if that
       matters to you.<br />
-      But something being present here doesn't guarantee I actually enjoy it or even have
-      ever touched it, <br /> I just like the music.
+      But something being present here doesn't guarantee I actually enjoy it or even
+      have ever touched it, <br /> I just like the music.
     </p>
     <p class="mt-1">
       All the tracks are divided into 5 categories. The names are pretty
@@ -65,12 +66,14 @@ const summary = musicTree[1] as TreeSummary;
       They are pretty arbitrary, be it by franchise, studio, artist or just vibes.
     </p>
     <p class="mt-1">
-      <strong>Tip: you can middle-click on the links to open them in a new tab.</strong> It makes opening lots of links faster.
+      <strong
+        >Tip: you can middle-click on the links to open them in a new tab.</strong
+      > It makes opening lots of links faster.
     </p>
     <p class="mt-1">
       <em>
         Summary: {summary.files} files, {summary.directories} directories. Last updated:
-        26 August 2024.
+        {(new Date()).toDateString().split(' ').slice(1).join(' ')}.
       </em>
     </p>
     <button
