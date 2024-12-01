@@ -700,7 +700,7 @@
     "info": "Padal proshlogodniy sneg, \"Last year's snow was falling\", a Soviet claymation animated short. Highly recommend watching it, for the creative animation and cool score. It's available on YouTube, but <a href=\"https://www.animatsiya.net/film.php?filmid=11\">here you can watch it with English subs</a>."
   },
   "Остров Сокровищ": {
-    "info": "Ostrov Sokrovishch, \"Treasure island\", one of the many adaptations of Treasure Island. Highly recommend watching it, for the very stylish animation and songs. There's official English localization, \"Return to Treasure Island\", but the voice acting is not as expressive, they replaced all the music and cut all the live-action song segments, which are half the fun. It's available on YouTube, but you can watch <a href=\"https://www.animatsiya.net/film.php?filmid=463\">part 1 here</a> and <a href=\"https://www.animatsiya.net/film.php?filmid=464\">part 2 here</a> with very good English subs.",
+    "info": "Ostrov Sokrovishch, \"Treasure island\" 1988, one of the many soviet adaptations of Treasure Island. Highly recommend watching it, for the very stylish animation and songs. There's official English localization, \"Return to Treasure Island\", but the voice acting is not as expressive, they replaced all the music and cut all the live-action song segments, which are half the fun. The original is available on YouTube, but you can watch <a href=\"https://www.animatsiya.net/film.php?filmid=463\">episode 1 here</a> and <a href=\"https://www.animatsiya.net/film.php?filmid=464\">episode 2 here</a> with very good English subs.<br/>This directory contains the score, with a separate Songs subdirectory.<br/><br/>Funny story, originally there were no songs planned whatsoever, but when they were done with animation it turned out that the runtime was too short so they had to pad it somehow. And so they decided to cram in songs with live-action footage about just whatever, like how being greedy and smoking is bad, just to extend the runtime. But the songs are bangers nonetheless.",
     "link": "https://www.youtube.com/watch?v=zbhBHJXIW48"
   },
   "Приключения капитана Врунгеля": {
@@ -1025,5 +1025,33 @@
   "zamanov001 - Остров в Море Призраков (Санбой x Dragonborn Comes)": {
     "link": "https://www.youtube.com/watch?v=ePhYhCmayGs",
     "info": "A vocal cover of the song <a href=\"https://www.youtube.com/watch?v=rjvImL06_1k\">\"Остров в океане\"</a> (Ostrov v okeane, \"Island in the ocean\") by Пророк Санбой (Prorok Sanboy, \"Sunboy the Prophet\") over \"The Dragonborn Comes\" from The Elder Scrolls V: Skyrim."
+  },
+  "3. Песня о вреде пьянства": {
+    "link": "https://www.youtube.com/watch?v=9eDkKMXkLJw",
+    "info": "\"Song about the harm of drinking\"."
+  },
+  "4. Песня о пользе спорта": {
+    "link": "https://www.youtube.com/watch?v=CAXQZWqKjJM",
+    "info": "\"Song about the benefits of sports\"."
+  },
+  "6. Песня о жадном Билли": {
+    "link": "https://www.youtube.com/watch?v=bwxWB2tlb14",
+    "info": "\"Song about greedy Billy\"."
+  },
+  "7. Мы все участники регаты": {
+    "link": "https://www.youtube.com/watch?v=TL1OPtAzi9c",
+    "info": "My vse uchastniki regaty \"We're all take part in this regatta\". Too bad there is no separate music video upload, but it's <a href=\"https://youtu.be/0lRIMn91dZU?t=2158\">in the full upload of episode 2 at 35:58</a>."
+  },
+  "8. Песня о вреде курения": {
+    "link": "https://www.youtube.com/watch?v=BoPpb6ETlCw",
+    "info": "\"Song about the harm of smoking\"."
+  },
+  "9. Фортуна-лотерея": {
+    "link": "https://www.youtube.com/watch?v=TQlU7jlNp1g",
+    "info": "Fortuna-lotereya \"That's fortune, that's lottery\". Too bad there is no separate music video upload, but it's <a href=\"https://youtu.be/0lRIMn91dZU?t=3320\">in the full upload of episode 2 at 55:20</a>."
+  },
+  "10. Танго Сильвера [ПОЛНАЯ ВЕРСИЯ]": {
+    "link": "https://www.youtube.com/watch?v=jd_RNx4HRDg",
+    "info": "Silver's tango."
   }
 }
