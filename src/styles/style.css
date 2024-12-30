@@ -30,7 +30,7 @@
     h4,
     h5,
     h6 {
-      @apply readable:font-bold px-1 text-white;
+      @apply readable:font-semibold px-1 text-white;
     }
 
     h1,

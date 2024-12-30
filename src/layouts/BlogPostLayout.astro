@@ -21,53 +21,49 @@ const { headings } = await post.render();
 
 <Layout title={title} description={description}>
   <section
-    class="smoothing-none readable:font-sans readable:text-lg container px-1 py-4 font-c64pm text-px16 leading-6"
+    class="smoothing-none container px-1 py-4 font-c64pm text-px16 leading-6 readable:font-sans readable:text-lg"
   >
     <article class="flex flex-col justify-center lg:flex-row-reverse">
-      {
-        !!headings.length && (
-          <div class="lg:pl-1">
-            <aside class="top-1 space-y-1 lg:sticky">
-              <div class="flex justify-end">
-                <a
-                  href="/blog"
-                  class="inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
-                >
-                  <span aria-hidden="true">
-                    <Petscii index={31} />
-                  </span>
-                  back
-                </a>
-              </div>
-              <div>
-                <FontToggle />
-              </div>
-              <TOC headings={headings} />
-            </aside>
+      <div class="lg:pl-1">
+        <aside class="top-1 space-y-1 lg:sticky">
+          <div class="flex justify-end">
+            <a
+              href="/blog"
+              class="inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+            >
+              <span aria-hidden="true">
+                <Petscii index={31} />
+              </span>
+              back
+            </a>
           </div>
-        )
-      }
+          <div>
+            <FontToggle />
+          </div>
+          {!!headings.length && <TOC headings={headings} />}
+        </aside>
+      </div>
       <div class="space-y-1 lg:max-w-screen-md">
         {cover && <Image alt={cover.alt} src={cover.src} />}
         <h1 class={`readable:font-bold ${colors[post.data.color].text}`}>
           {title}
         </h1>
-        <div class="flex flex-wrap gap-x-1 text-grey-dark">
-          <span>
+        <div class="flex flex-wrap justify-between gap-x-1">
+          <span class="text-grey-dark">
             <FormattedDate date={pubDate} />
+            {
+              updatedDate && (
+                <span>
+                  UPD:
+                  <FormattedDate date={updatedDate} />
+                </span>
+              )
+            }
           </span>
-          {
-            updatedDate && (
-              <span>
-                UPD:
-                <FormattedDate date={updatedDate} />
-              </span>
-            )
-          }
         </div>
         <p class="text-grey-medium">{description}</p>
-        <hr class="border-dashed" />
-        <div class="prose readable:font-sans font-c64p text-grey-light">
+        <hr class="border-0.0625 border-dashed" />
+        <div class="prose font-c64p text-grey-light readable:font-sans">
           <slot />
         </div>
       </div>
