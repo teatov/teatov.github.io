@@ -37,7 +37,7 @@ import { nChars } from '@/utils/petscii';
       </li>
     </ul>
     <div class="mb-1 mt-1 flex flex-col sm:flex-row">
-      <div class="relative w-20 ml-3 sm:-ml-2">
+      <div class="relative ml-3 w-20 sm:-ml-2">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
           <Petscii matrix={socialBox(4, 4, 2)} />
         </div>
@@ -95,12 +95,19 @@ import { nChars } from '@/utils/petscii';
         </div>
       </div>
     </div>
-    <div class="w-22 sm:w-26">
-      I'm currently making games at <a
-        href="https://23cmline.com/en/"
-        class="bg-grey-medium outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
-        >23&nbsp;Centimetre&nbsp;Line</a
-      >.
-    </div>
+    {
+      // (
+      //   <div class="w-22 sm:w-26">
+      //     I'm currently making games at{' '}
+      //     <a
+      //       href="https://23cmline.com/en/"
+      //       class="bg-grey-medium outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
+      //     >
+      //       23&nbsp;Centimetre&nbsp;Line
+      //     </a>
+      //     .
+      //   </div>
+      // )
+    }
   </div>
 </Layout>
