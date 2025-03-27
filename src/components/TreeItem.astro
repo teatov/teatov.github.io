@@ -58,7 +58,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
       )
     }
   </summary>
-  <div class="ml-1">
+  <ul class="ml-1 list-disc list-outside">
     {
       directory.contents
         .sort((a, b) =>
@@ -73,7 +73,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
               | ItemInfo
               | undefined;
             return (
-              <div class="relative">
+              <li class="relative ml-1">
                 <p>{name}</p>
                 {trackInfo && trackInfo.info && (
                   <details>
@@ -96,12 +96,12 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
                     </a>
                   </div>
                 )}
-              </div>
+              </li>
             );
           } else if (item.type === 'directory' && item.contents) {
             return <Astro.self directory={item} />;
           }
         })
     }
-  </div>
+  </ul>
 </details>
