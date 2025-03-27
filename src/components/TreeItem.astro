@@ -27,7 +27,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
   | undefined;
 ---
 
-<details class="tree-item">
+<details class="tree-item" {...directory.name === '.' ? { open: '' } : {}}>
   <summary
     class="relative cursor-pointer text-grey-light outline-none hover:bg-grey-dark hover:text-white focus-visible:bg-grey-dark focus-visible:text-white"
   >
@@ -58,7 +58,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
       )
     }
   </summary>
-  <ul class="ml-1 list-disc list-outside">
+  <ul class="ml-1 list-outside list-disc">
     {
       directory.contents
         .sort((a, b) =>
