@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://teatov.github.io',
+  site: 'https://teatov.xyz',
   integrations: [
     tailwind({
       applyBaseStyles: false,
