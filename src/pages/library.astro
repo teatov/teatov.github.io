@@ -66,14 +66,24 @@ const summary = musicTree[1] as TreeSummary;
       They are pretty arbitrary, be it by franchise, studio, artist or just vibes.
     </p>
     <p class="mt-1">
+      You can look at the change history <a
+        href="https://github.com/teatov/teatov.github.io/commits/main/src/lib/musicTree.json"
+        class="mb-1 inline-block bg-cyan text-black outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+        >here</a
+      >.
+    </p>
+    <p class="mt-1">
       <strong
         >Tip: you can middle-click on the links to open them in a new tab.</strong
-      > It makes opening lots of links faster.
+      > It makes opening lots of links faster.<br /><strong
+        >Also you can <code>expand all</code> and <code>Ctrl+F</code> if you're looking
+        for something in particular.</strong
+      >
     </p>
     <p class="mt-1">
       <em>
         Summary: {summary.files} files, {summary.directories} directories. Last updated:
-        {(new Date()).toDateString().split(' ').slice(1).join(' ')}.
+        {new Date().toDateString().split(' ').slice(1).join(' ')}.
       </em>
     </p>
     <button
@@ -81,7 +91,7 @@ const summary = musicTree[1] as TreeSummary;
       class="bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
       >expand/collapse all</button
     >
-    <div class="mt-1 mb-10">
+    <div class="mb-10 mt-1">
       <TreeItem directory={root} />
     </div>
   </div>
