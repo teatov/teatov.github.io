@@ -15659,6 +15659,21 @@
       ]},
       {"type":"file","name":"The Garden - Sneaky Devil.mp3"},
       {"type":"file","name":"The Hellp - yrstruly (CFCF Remix).mp3"},
+      {"type":"directory","name":"The Madeline Mixtape A Charity Arrangement Album","contents":[
+        {"type":"file","name":"10. Chango - Star Chase.mp3"},
+        {"type":"file","name":"11. MetaMusic - Your Worst Critic.mp3"},
+        {"type":"file","name":"12. TheBeastlyPichu - Extreme Temperatures.mp3"},
+        {"type":"file","name":"13. Nuchuu - Comforting Myself.mp3"},
+        {"type":"file","name":"1. Cayenneta - Prologue.mp3"},
+        {"type":"file","name":"2. TheBeastlyPichu - Step One.mp3"},
+        {"type":"file","name":"3. PsychLantern - To Those Who Perished on the Climb.mp3"},
+        {"type":"file","name":"4. ThePhreshPhrog - Nodding Off.mp3"},
+        {"type":"file","name":"5. livvy94 - Sparkling In.mp3"},
+        {"type":"file","name":"6. Sebb - Haunted Halls.mp3"},
+        {"type":"file","name":"7. Izzyience - Golden Mystique.mp3"},
+        {"type":"file","name":"8. Rom M - The Other Side.mp3"},
+        {"type":"file","name":"9. Orelover - Madeline's Mirror Zone.mp3"}
+      ]},
       {"type":"file","name":"The Proclaimers - I'm Gonna Be (500 Miles).mp3"},
       {"type":"file","name":"The Wurzels - I Am a Cider Drinker (Paloma Blanca).mp3"},
       {"type":"file","name":"The Wurzels - The Combine Harvester (Brand New Key).mp3"},
@@ -16850,5 +16865,5 @@
     ]}
   ]}
 ,
-  {"type":"report","directories":824,"files":15205}
+  {"type":"report","directories":825,"files":15218}
 ]
