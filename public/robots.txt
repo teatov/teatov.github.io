@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+Sitemap: https://teatov.xyz/sitemap-index.xml
