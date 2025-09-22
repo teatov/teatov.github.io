@@ -37,7 +37,7 @@ import { nChars } from '@/utils/petscii';
       </li>
     </ul>
     <div class="mb-1 mt-1 flex flex-col sm:flex-row">
-      <div class="relative ml-3 sm:w-20 sm:-ml-2">
+      <div class="relative ml-3 sm:-ml-2 sm:w-20">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
           <Petscii matrix={socialBox(5, 5, 0)} />
         </div>
@@ -110,7 +110,19 @@ import { nChars } from '@/utils/petscii';
             class="outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
             >steamry</a
           >
-          <span class="text-grey-light">- a daily steam review ratio guessing game</span>
+          <span class="text-grey-light"
+            >- a daily steam review ratio guessing game</span
+          >
+        </li>
+        <li>
+          <span class="text-grey-dark">&gt;</span>&nbsp;<a
+            href="https://teatov.xyz/bsky-connectivity-graph/"
+            class="outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
+            >bluesky connectivity graph thingy</a
+          >
+          <span class="text-grey-light"
+            >- visualize how interconnected are your follows</span
+          >
         </li>
         <li>
           <span class="text-grey-dark">&gt;</span>&nbsp;<a
@@ -118,7 +130,9 @@ import { nChars } from '@/utils/petscii';
             class="outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
             >css palettery</a
           >
-          <span class="text-grey-light">- a tool for changing css colors in bulk</span>
+          <span class="text-grey-light"
+            >- a tool for changing css colors in bulk</span
+          >
         </li>
       </ul>
       <div class="mt-2 text-red-light">cool links:</div>
