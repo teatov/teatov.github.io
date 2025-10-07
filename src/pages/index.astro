@@ -37,12 +37,12 @@ import { nChars } from '@/utils/petscii';
       </li>
     </ul>
     <div class="mb-1 mt-1 flex flex-col sm:flex-row">
-      <div class="relative ml-3 sm:-ml-2 sm:w-20">
+      <div class="relative sm:-ml-2 sm:w-20">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
-          <Petscii matrix={socialBox(5, 5, 0)} />
+          <Petscii matrix={socialBox(5, 6, 5)} />
         </div>
-        <ul class="absolute ml-1 pt-1">
-          <li class="ml-1 inline-block">
+        <ul class="absolute ml-1 flex space-x-1 px-1 pt-1">
+          <li class="inline-block">
             <a
               href="https://bsky.app/profile/teatov.xyz"
               class="inline-block bg-grey-dark outline-none hover:bg-blue-dark hover:text-cyan focus-visible:bg-blue-dark focus-visible:text-cyan"
@@ -50,10 +50,20 @@ import { nChars } from '@/utils/petscii';
               aria-label="Bluesky"
               rel="noopener noreferrer">•bsky</a
             >
-          </li><li class="ml-1 inline-block">
+          </li>
+          <li class="inline-block">
+            <a
+              href="https://mastodon.gamedev.place/@teatov"
+              class="inline-block bg-grey-dark outline-none hover:bg-purple hover:text-blue-dark focus-visible:bg-purple focus-visible:text-blue-dark"
+              title="Mastodon"
+              aria-label="Mastodon"
+              rel="me noopener noreferrer">•mstdn</a
+            >
+          </li>
+          <li class="inline-block">
             <a
               href="https://github.com/teatov"
-              class="inline-block bg-grey-dark outline-none hover:bg-purple hover:text-blue-dark focus-visible:bg-purple focus-visible:text-blue-dark"
+              class="inline-block bg-grey-dark outline-none hover:bg-grey-light hover:text-grey-dark focus-visible:bg-grey-light focus-visible:text-grey-dark"
               title="GitHub"
               aria-label="GitHub"
               rel="noopener noreferrer">•gthb</a
