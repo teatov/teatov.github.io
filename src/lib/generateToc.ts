@@ -19,7 +19,7 @@ export function generateToc(headings: ReadonlyArray<MarkdownHeading>) {
   const bodyHeadings = [...headings.filter(({ depth }) => depth > 1)];
   const toc: Array<TocItem> = [];
 
-  bodyHeadings.forEach(h => {
+  bodyHeadings.forEach((h) => {
     const heading: TocItem = { ...h, subheadings: [] };
 
     if (heading.depth === 2) {

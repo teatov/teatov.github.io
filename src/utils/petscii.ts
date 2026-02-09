@@ -64,7 +64,7 @@ export function indexToEscapeChar(index: number | null): string {
 
 export function indexMatrixToHtml(matrix: (number | null)[][]): string {
   return matrix
-    .map(row => row.map(cell => indexToEscapeChar(cell)).join(''))
+    .map((row) => row.map((cell) => indexToEscapeChar(cell)).join(''))
     .join('<br>');
 }
 
