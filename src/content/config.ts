@@ -1,5 +1,5 @@
-import { colors } from '@/utils/colors';
 import { z, defineCollection } from 'astro:content';
+import { colors } from '@/utils/colors';
 
 const blog = defineCollection({
   type: 'content',
