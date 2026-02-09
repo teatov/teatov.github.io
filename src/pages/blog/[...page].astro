@@ -13,7 +13,7 @@ import { colors, getColorFromString } from '@/utils/colors';
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getAllPosts();
   const allPostsByDate = sortMDByDate(allPosts);
-  return paginate(allPostsByDate, { pageSize: 6 });
+  return paginate(allPostsByDate, { pageSize: 12 });
 }) satisfies GetStaticPaths;
 
 interface Props {
@@ -31,7 +31,7 @@ const lastPage = page.lastPage;
 
 <Layout title="Teatov's Blog" description="An index of all my blog posts.">
   <div
-    class="smoothing-none container max-w-screen-md px-1 py-4 font-c64pm text-px16 readable:font-sans readable:text-lg"
+    class="smoothing-none container max-w-screen-md px-1 py-4 font-c64pm text-px16"
   >
     <div>
       <div class="flex items-start justify-between gap-1">
@@ -51,7 +51,7 @@ const lastPage = page.lastPage;
               >g</span
             >
           </h1>
-          <div class="w-14 overflow-hidden text-grey-dark readable:hidden">
+          <div class="w-14 overflow-hidden text-grey-dark">
             <div class="scroll w-20 select-none" aria-hidden="true">
               <Petscii matrix={[[...wave, ...wave, ...wave.slice(0, 1)]]} />
             </div>
@@ -64,36 +64,43 @@ const lastPage = page.lastPage;
           <span aria-hidden="true"><Petscii index={31} /></span> back</a
         >
       </div>
-      <div class="flex justify-end">
-        <FontToggle />
-      </div>
-      <section aria-label="Blog post list" class="mt-1">
+      <section
+        aria-label="Blog post list"
+        class="leading-6 readable:font-sans readable:text-lg readable:leading-8"
+      >
+        <div class="my-1 flex justify-end">
+          <FontToggle />
+        </div>
         <ul class="space-y-1">
           {page.data.length === 0 && <p>no posts yet...</p>}
           {
             page.data.map((p) => (
               <li>
-                <div class="mb-1 flex flex-col md:flex-row">
+                <a
+                  href={`/blog/${p.slug}`}
+                  class="group mb-1 flex flex-col outline-none md:flex-row"
+                >
                   {p.data.cover && (
                     <div class="w-full shrink-0 md:w-10">
                       <Image src={p.data.cover.src} alt={p.data.cover.alt} />
                     </div>
                   )}
                   <div class="w-full space-y-1 readable:space-y-0">
-                    <a
-                      href={`/blog/${p.slug}`}
-                      class={`block readable:font-bold ${colors[p.data.color].text} outline-none hover:${colors[p.data.color].bg} hover:${colors[p.data.color].textHover} focus-visible:${colors[p.data.color].bg} focus-visible:${colors[p.data.color].textHover}`}
+                    <h2
+                      class={`block readable:font-bold ${colors[p.data.color].text} group-hover:${colors[p.data.color].bg} group-hover:${colors[p.data.color].textHover} group-focus-visible:${colors[p.data.color].bg} group-focus-visible:${colors[p.data.color].textHover}`}
                     >
                       {p.data.title}
-                    </a>
-                    <p class="text-grey-light">{p.data.description}</p>
+                    </h2>
+                    <p class="font-c64p text-grey-light readable:font-sans">
+                      {p.data.description}
+                    </p>
                     <div class="flex flex-row justify-end text-grey-dark">
                       <FormattedDate
                         date={p.data.updatedDate ?? p.data.pubDate}
                       />
                     </div>
                   </div>
-                </div>
+                </a>
                 <hr class="border-0.0625 border-dashed" />
               </li>
             ))

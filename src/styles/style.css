@@ -16,10 +16,9 @@
     @apply bg-blue-dark text-white;
   }
 
-  
-  .prose {
+  .prose, .prose section {
     @apply space-y-1 break-words;
-    
+
     hr {
       @apply border-t-0.5 border-grey-dark;
     }
@@ -30,7 +29,7 @@
     h4,
     h5,
     h6 {
-      @apply readable:font-semibold px-1 text-white;
+      @apply px-1 text-white readable:font-semibold font-c64pm;
     }
 
     h1,
@@ -50,7 +49,7 @@
     }
 
     code {
-      @apply readable:font-mono font-c64pm;
+      @apply font-c64pm readable:font-mono;
     }
 
     a {
@@ -66,11 +65,11 @@
     }
 
     th {
-      @apply border-0.5 p-0.5 border-grey-dark text-left;
+      @apply border-0.5 border-grey-dark p-0.5 text-left;
     }
 
     td {
-      @apply border-0.5 p-0.5 border-grey-dark;
+      @apply border-0.5 border-grey-dark p-0.5;
     }
 
     ul {

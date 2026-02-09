@@ -21,10 +21,10 @@ const { headings } = await post.render();
 
 <Layout title={title} description={description}>
   <section
-    class="smoothing-none container px-1 py-4 font-c64pm text-px16 leading-6 readable:font-sans readable:text-lg"
+    class="smoothing-none container px-1 py-4 font-c64pm text-px16 leading-6"
   >
     <article class="flex flex-col justify-center lg:flex-row-reverse">
-      <div class="lg:pl-1">
+      <div class="mb-2 lg:pl-1">
         <aside class="top-1 space-y-1 lg:sticky">
           <div class="flex justify-end">
             <a
@@ -37,10 +37,12 @@ const { headings } = await post.render();
               back
             </a>
           </div>
-          <div>
-            <FontToggle />
+          <div class="readable:font-sans readable:text-lg readable:leading-8">
+            <div class="mb-1">
+              <FontToggle />
+            </div>
+            {!!headings.length && <TOC headings={headings} />}
           </div>
-          {!!headings.length && <TOC headings={headings} />}
         </aside>
       </div>
       <div class="space-y-1 lg:max-w-screen-md">
@@ -48,23 +50,29 @@ const { headings } = await post.render();
         <h1 class={`readable:font-bold ${colors[post.data.color].text}`}>
           {title}
         </h1>
-        <div class="flex flex-wrap justify-between gap-x-1">
-          <span class="text-grey-dark">
-            <FormattedDate date={pubDate} />
-            {
-              updatedDate && (
-                <span>
-                  UPD:
-                  <FormattedDate date={updatedDate} />
-                </span>
-              )
-            }
-          </span>
-        </div>
-        <p class="text-grey-medium">{description}</p>
-        <hr class="border-0.0625 border-dashed" />
-        <div class="prose font-c64p text-grey-light readable:font-sans">
-          <slot />
+        <div
+          class="space-y-1 readable:font-sans readable:text-lg readable:leading-8"
+        >
+          <div class="flex flex-wrap justify-between gap-x-1">
+            <span class="text-grey-dark">
+              <FormattedDate date={pubDate} />
+              {
+                updatedDate && (
+                  <span>
+                    UPD:
+                    <FormattedDate date={updatedDate} />
+                  </span>
+                )
+              }
+            </span>
+          </div>
+          <p class="font-c64p text-grey-medium readable:font-sans">
+            {description}
+          </p>
+          <hr class="border-0.0625 border-dashed" />
+          <div class="prose font-c64p text-grey-light readable:font-sans">
+            <slot />
+          </div>
         </div>
       </div>
     </article>

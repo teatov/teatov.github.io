@@ -3,15 +3,16 @@ import Layout from '@/layouts/Layout.astro';
 import Petscii from '@/components/Petscii.astro';
 import { anatoly, wave, socialBox, blogBox } from '@/utils/art';
 import { nChars } from '@/utils/petscii';
+import FontToggle from '@/components/FontToggle.astro';
 ---
 
 <Layout
   title="Teatov"
   description="Hi, I'm Anatoly: a fullstack web dev, a hobbyist game dev and a 3D artist."
 >
-  <div class="smoothing-none font-c64pm text-px16 sm:text-px24">
+  <div class="smoothing-none my-4 font-c64pm text-px16 sm:text-px24">
     <div class="text-grey-light sm:-ml-1">Hi, I'm</div>
-    <div title="Anatoly" aria-label="Anatoly:">
+    <div title="Anatoly" aria-label="Anatoly:" class="cursor-help">
       <div aria-hidden="true"><Petscii matrix={anatoly} /></div>
     </div>
     <div class="-mt-1 w-18 overflow-hidden text-grey-dark">
@@ -37,7 +38,7 @@ import { nChars } from '@/utils/petscii';
       </li>
     </ul>
     <div class="mb-1 mt-1 flex flex-col sm:flex-row">
-      <div class="relative sm:-ml-2 sm:w-20 ml-4">
+      <div class="relative ml-4 sm:-ml-2 sm:w-20">
         <div class="absolute select-none text-grey-dark" aria-hidden="true">
           <Petscii matrix={socialBox(5, 0, 5)} />
         </div>
@@ -102,7 +103,10 @@ import { nChars } from '@/utils/petscii';
         <Petscii matrix={[[...nChars(16, 104)]]} />
       </div>
     </div>
-    <div class="mt-3 w-22 sm:w-26">
+    <div class="mt-3 w-22 readable:font-sans readable:leading-8 sm:w-26">
+      <div class="mb-1 flex justify-end">
+        <FontToggle />
+      </div>
       <div class="text-yellow">stuff I made:</div>
       <ul class="space-y-1">
         <li>
@@ -142,7 +146,8 @@ import { nChars } from '@/utils/petscii';
             >Wikipedia article language comparer</a
           >
           <span class="text-grey-light"
-            >- find the languages that one Wikipedia article has, but the other doesn't</span
+            >- find the languages that one Wikipedia article has, but the other
+            doesn't</span
           >
         </li>
       </ul>
@@ -150,7 +155,7 @@ import { nChars } from '@/utils/petscii';
       <ul class="space-y-1">
         <li>
           <span class="text-grey-dark">&gt;</span>&nbsp;<a
-            href={Astro.site + '/library'}
+            href="/library"
             class="outline-none hover:bg-grey-dark hover:text-yellow focus-visible:bg-grey-dark focus-visible:text-yellow"
             >my giant music library</a
           >

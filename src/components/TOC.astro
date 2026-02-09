@@ -9,15 +9,15 @@ const { headings } = Astro.props;
 ---
 
 <nav class="lg:max-w-17">
-  <h2 class="mb-1 readable:font-bold">Table of Contents</h2>
+  <h2 class="readable:font-bold">Table of Contents</h2>
   <ul>
     {
-      headings.map(heading => (
-        <li class="text-grey-light odd:text-grey-medium ">
+      headings.map((heading) => (
+        <li class="text-grey-light">
           <a
             aria-label={`Scroll to section: ${heading.text}`}
             href={`#${heading.slug}`}
-            class="block outline-none hover:bg-grey-light hover:text-black focus-visible:bg-grey-light focus-visible:text-black"
+            class={`block outline-none hover:bg-grey-light hover:text-black focus-visible:bg-grey-light focus-visible:text-black ml-${heading.depth - 1}`}
           >
             {heading.text}
           </a>
@@ -28,38 +28,24 @@ const { headings } = Astro.props;
 </nav>
 
 <script>
-  const fnObserver = () => {
-    function handleIntersection(
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
-    ) {
-      entries.forEach(entry => {
-        const index = document.querySelector(
-          `aside a[href="#${entry.target.id}"]`
-        );
+  const observer = new IntersectionObserver((sections) => {
+    sections.forEach((section) => {
+      const heading = section.target.querySelector('h1, h2, h3, h4, h5');
+      if (!heading) return;
+      const id = heading.getAttribute('id');
 
-        if (entry.isIntersecting) {
-          index?.classList.add('bg-grey-dark');
-        } else {
-          index?.classList.remove('bg-grey-dark');
-        }
-      });
-    }
+      const link = document.querySelector(`aside li a[href="#${id}"]`);
+      if (!link) return;
 
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-
-    const options = {
-      root: null,
-      rootMargin: ' 15% 0px 0% 0px ',
-      threshold: 1,
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    headings.forEach(heading => {
-      observer.observe(heading);
+      if (section.intersectionRatio > 0) {
+        link?.classList.add('bg-grey-dark');
+      } else {
+        link?.classList.remove('bg-grey-dark');
+      }
     });
-  };
-  fnObserver();
-  document.addEventListener('astro:after-swap', fnObserver);
+  });
+
+  document.querySelectorAll('section').forEach((section) => {
+    observer.observe(section);
+  });
 </script>
