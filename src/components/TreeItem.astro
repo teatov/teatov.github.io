@@ -68,7 +68,9 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
         )
         .map((item) => {
           if (item.type === 'file') {
-            const name = item.name.replace('.mp3', '');
+            const name = item.name
+              .replace('.mp3', '')
+              .replace('/mnt/shared/Music/', '.');
             const trackInfo = musicInfo[name as keyof typeof musicInfo] as
               | ItemInfo
               | undefined;
