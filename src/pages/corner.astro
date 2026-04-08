@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Petscii from '@/components/Petscii.astro';
+---
+
+<Layout title="Teatov's awesome corner" description="Cool stuff!">
+  <div class="my-4 px-1">
+    <a
+      href="/"
+      class="mb-1 inline-block bg-grey-dark outline-none hover:bg-cyan hover:text-blue-dark focus-visible:bg-cyan focus-visible:text-blue-dark"
+    >
+      <span aria-hidden="true"><Petscii index={31} /></span> back</a
+    >
+    <h1 class="mb-2">
+      this is my awesome "corner" where I put "stuff". welcome
+    </h1>
+    <div>
+      <img src="/images/gordon_shooting.gif" alt="gordon shooting the shit" />
+      <img src="/images/true_detected.gif" alt="true detected" />
+      <img
+        src="/images/someonegotbanned.png"
+        alt="someone got banned... concerning"
+      />
+    </div>
+    <div>
+      <img src="/images/wmp.gif" alt="windows media player" />
+    </div>
+    <div>
+      <img
+        src="/images/powerful.png"
+        alt="libya powerful business webring PROUD MEMBER"
+      />
+      <img
+        src="/images/tumblr_bea3eb39040a200bd2a6af70e367a1dd_d78590e5_400.jpg"
+        alt="youtube yownloader"
+      />
+    </div>
+  </div>
+</Layout>
