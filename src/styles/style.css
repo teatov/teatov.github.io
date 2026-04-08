@@ -16,7 +16,12 @@
     @apply bg-blue-dark text-white;
   }
 
-  .prose, .prose section {
+  img {
+    display: inline-block;
+  }
+
+  .prose,
+  .prose section {
     @apply space-y-1 break-words;
 
     hr {
@@ -29,7 +34,7 @@
     h4,
     h5,
     h6 {
-      @apply px-1 text-white readable:font-semibold font-c64pm;
+      @apply px-1 font-c64pm text-white readable:font-semibold;
     }
 
     h1,

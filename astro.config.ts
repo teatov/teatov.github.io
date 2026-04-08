@@ -1,5 +1,5 @@
 import tailwind from '@astrojs/tailwind';
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import sectionize from '@hbsnow/rehype-sectionize';
 
@@ -9,6 +9,10 @@ export default defineConfig({
   trailingSlash: 'never',
   build: {
     assets: '_assets',
+  },
+  image: {
+    service: passthroughImageService(),
+    
   },
   integrations: [
     tailwind({
