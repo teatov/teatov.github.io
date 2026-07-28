@@ -75,7 +75,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
               | ItemInfo
               | undefined;
             return (
-              <li class="relative ml-1">
+              <li class="relative ml-1 hover:bg-grey-dark hover:text-white">
                 <p>{name}</p>
                 {trackInfo && trackInfo.info && (
                   <details>
