@@ -61,6 +61,7 @@ const directoryInfo = musicInfo[directory.name as keyof typeof musicInfo] as
   <ul class="ml-1 list-outside list-disc">
     {
       directory.contents
+        .filter((item) => !['fixnames.sh'].includes(item.name))
         .sort((a, b) =>
           a.type !== b.type
             ? a.type.localeCompare(b.type, undefined, { numeric: true })
